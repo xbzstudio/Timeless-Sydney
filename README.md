@@ -48,7 +48,7 @@ pip install BingImageCreator
 
 进入./src/js文件夹后，就可以看到一个名为“setting.js”的文件。打开这个文件，里面储存着一段代码，默认是这样：
 
-```
+```javascript
 var setting = {
 
     autoTranslate:true, //是否默认启用自动翻译，true为是，false为否
@@ -71,7 +71,7 @@ var setting = {
 ## 鸣谢：
 
 [Bing-Chat](https://github.com/XiaoXinYo/Bing-Chat)的开发者[XiaoXinYo](https://github.com/XiaoXinYo)  
-本项目的BingServer.py就是他开发的！
+本项目的[BingServer.py](https://github.com/xbzstudio/BingAI-Client/blob/main/BingAiSever/BingServer.py)就是他开发的！
 
 ## 链接：
 
