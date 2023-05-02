@@ -4,17 +4,32 @@
     <link rel="shortcut icon" href="./src/images/Bing.png">
     <meta name=”viewport” content="width=device-width, initial-scale=1" />
     <script src="./src/js/setting.js"></script>
-    <title>Bing AI</title>
+    <title>Bing AI v1.2</title>
     <style>
       .bingReply
       {
         background-color: rgb(244, 244, 244);
-        padding: 2%;
+        padding: 3%;
       }
       .userReply
       {
         background-color: rgb(255, 255, 255);
-        padding: 2%;
+        padding: 3%;
+      }
+      .p{
+        background-image:-webkit-linear-gradient(right, #039ac8,#10c74d);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+      }
+      .a{
+        background-image:-webkit-linear-gradient(right, #039ac8,#10c74d);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        text-decoration:none;
+      }
+      .a:hover{
+        border: 2px solid rgb(27, 210, 113);
+        margin-left: -2px;
       }
       .demoinput2{
         outline-style: none ;
@@ -106,6 +121,15 @@
       }
 
       .green:hover:before {
+        background-position: left bottom;
+      }
+
+      .green2 {
+        background-image: linear-gradient(to right, #40e495,#25aae1);
+        box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+      }
+
+      .green2:hover:before {
         background-position: left bottom;
       }
 
@@ -246,10 +270,17 @@
             <p style="float:left;color:#616161;padding-left:2.5%;padding-top: 1.5%;">{{x.name}}</p>
             <div style="clear:both;"></div>
             <p style="padding-top: 3%;">{{x.data}}</p>
+            <br ng-show="x.urls.length != 0">
+            <h3 ng-show="x.urls.length != 0" class="p">数据来源：</h3>
+            <div ng-repeat="y in x.urls">
+              <div style="margin-top:2%;">
+                <a href="{{y.url}}" class="a" target="_blank">{{y.title}}</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <br><br><br><br><br><br><br>
+      <br><br><br><br><br>
       <div class="inputBox2">
         <div ng-show="showSetting" class="settingBox">
           <div>
@@ -283,6 +314,7 @@
       <div class="inputBox" style="margin-left:64%">
         <div id="frozen-btn">
           <button class="green" ng-click="getReply()" ng-show="readyToAnswer">发送ヾ(≧▽≦*)o</button>
+          <button class="green2" ng-click="clearToken()" ng-show="readyToAnswer">新主题</button>
           <div class="loadingSeven" ng-show="readyToAnswer != true">
             <span></span>
             <span></span>
@@ -297,7 +329,7 @@
     <script type="module">
       var app = angular.module('BingChat',[]);
       app.controller('BingCTRL',function($scope, $http) {
-        $scope.tips = setting.tips
+        $scope.tips = setting.tips;
         $scope.tokenToServer = setting.tokenToServer;
         $scope.autoTranslate = setting.autoTranslate;
         $scope.showSetting = false;
@@ -306,6 +338,11 @@
         $scope.readyToAnswer = true;
         $scope.chatStyle = setting.chatStyle;
         $scope.userReplyData = '';
+        $scope.clearToken = function(){
+          $scope.token = '';
+          $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./src/images/Bing.png', data:'已开启新主题，New Bing已重置。', urls:[]});
+          console.log($scope.replies);
+        }
         $scope.openOrCloseSetting = function(){
           if ($scope.showSetting == true){
             $scope.showSetting = false;
@@ -337,7 +374,7 @@
         $scope.getBingReply = function() {
           $scope.readyToAnswer = false;
           var http = new XMLHttpRequest();
-          $scope.replies.push({name:'你',className:'userReply', imgURL:'./src/images/User.png', data : $scope.userReplyData});
+          $scope.replies.push({name:'你',className:'userReply', imgURL:'./src/images/User.png', data : $scope.userReplyData, urls: []});
           var qs = $scope.userReplyData;
           if ($scope.autoTranslate){
             qs = qs + '（请使用中文回复我）';
@@ -352,7 +389,7 @@
             if (http.readyState == 4){
               if (http.status ==200){
                 $scope.$apply(function() {
-                  var bingsAnswer = {name:'New Bing',className:'bingReply', imgURL:'./src/images/Bing.png', data:eval('('+http.responseText+')').data.answer};
+                  var bingsAnswer = {name:'New Bing',className:'bingReply', imgURL:'./src/images/Bing.png', data:eval('('+http.responseText+')').data.answer, urls:eval('('+http.responseText+')').data.urls};
                   $scope.replies.push(bingsAnswer);
                 });
                 $scope.$apply(function(){
@@ -360,7 +397,15 @@
                 });
                 if ($scope.token == ''){
                   $scope.token = eval('('+http.responseText+')').data.token;
+                  console.log($scope.token);
                 } 
+                if (eval('('+http.responseText+')').data.reset){
+                  $scope.$apply(function(){
+                    $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./src/images/Bing.png', data:"检测到当前对话已被强制结束，已为您自动切换至新的话题。",urls:[]});
+                  });
+                  $scope.token = '';
+                  console.log($scope.token);
+                }
                 console.log('Bing Answer Done');
                 console.log($scope.replies);
               }
@@ -369,7 +414,7 @@
                   $scope.readyToAnswer = true;
                 });
                 $scope.$apply(function(){
-                  $scope.replies.push({name:'New Bing', className : 'bingReply', imgURL:'./src/images/Bing.png',data:'Error: '+http.status+'请刷新该页面或重新发送信息以重试。'});
+                  $scope.replies.push({name:'New Bing', className : 'bingReply', imgURL:'./src/images/Bing.png',data:'Error: '+http.status+'请刷新该页面或重新发送信息以重试。', urls:[]});
                 });
                 console.log('Bing Answer Error');
               }
