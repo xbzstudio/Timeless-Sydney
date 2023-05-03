@@ -4,16 +4,24 @@
     <link rel="shortcut icon" href="./src/images/Bing.png">
     <meta name=”viewport” content="width=device-width, initial-scale=1" />
     <script src="./src/js/setting.js"></script>
-    <title>Bing AI v1.2</title>
+    <title>Bing AI v1.3</title>
     <style>
       .bingReply
       {
-        background-color: rgb(244, 244, 244);
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        border-radius: 25px;
+        box-shadow:inset 0 0 6px rgba(255, 255, 255, 0.2);
         padding: 3%;
       }
       .userReply
       {
-        background-color: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        border-radius: 25px;
+        box-shadow:inset 0 0 6px rgba(255, 255, 255, 0.2);
         padding: 3%;
       }
       .p{
@@ -144,6 +152,7 @@
       .reply{
         margin-left:25%;
         margin-right:25%;
+        margin-bottom: 2.5%;
       }
       .headImg{
         height: 5%;
@@ -261,15 +270,15 @@
       }
     </style>
   </head>
-  <body style="margin:0px;">
+  <body style="margin:0px;background:url(./src/images/Background.jpg);background-size:cover;background-attachment:fixed;">
     <div ng-app="BingChat" ng-controller="BingCTRL">
       <div ng-repeat="x in replies">
-        <div class="{{x.className}}">
-          <div class="reply">
+        <div class="reply">
+          <div class="{{x.className}}">
             <img src="{{x.imgURL}}" class="headImg">
-            <p style="float:left;color:#616161;padding-left:2.5%;padding-top: 1.5%;">{{x.name}}</p>
+            <p style="float:left;padding-left:2.5%;padding-top: 1.5%;color:{{nameColor}};">{{x.name}}</p>
             <div style="clear:both;"></div>
-            <p style="padding-top: 3%;">{{x.data}}</p>
+            <p style="color:{{fontColor}};padding-top:3%;white-space: pre-line;">{{x.data}}</p>
             <br ng-show="x.urls.length != 0">
             <h3 ng-show="x.urls.length != 0" class="p">数据来源：</h3>
             <div ng-repeat="y in x.urls">
@@ -286,6 +295,14 @@
           <div>
             <p class="setData">聊天前自动提示文本</p>
             <input placeholder="在token为空时自动提示" ng-model="tips" class="demoinput2">
+          </div>
+          <div>
+            <p class="setData">消息字体颜色</p>
+            <input placeholder="例如：black或white" ng-model="fontColor" class="demoinput2">
+          </div>
+          <div>
+            <p class="setData">名字字体颜色</p>
+            <input placeholder="例如：black或white" ng-model="nameColor" class="demoinput2">
           </div>
           <div>
             <p class="setData">连续对话</p>
@@ -322,13 +339,15 @@
             <span></span>
             <span></span>
           </div>
-          <p ng-show="readyToAnswer != true">Loading for NewBing...</p>
+          <p ng-show="readyToAnswer != true" style="color:{{fontColor}};">Loading for NewBing...</p>
         </div>
       </div>
     </div>
     <script type="module">
       var app = angular.module('BingChat',[]);
-      app.controller('BingCTRL',function($scope, $http) {
+      app.controller('BingCTRL',function($scope, $sce) {
+        $scope.fontColor = setting.fontColor;
+        $scope.nameColor = setting.nameColor;
         $scope.tips = setting.tips;
         $scope.tokenToServer = setting.tokenToServer;
         $scope.autoTranslate = setting.autoTranslate;
