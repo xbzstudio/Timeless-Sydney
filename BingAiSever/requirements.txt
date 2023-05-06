@@ -1,6 +1,0 @@
-fastapi
-python-multipart
-uvicorn
-asyncio
-EdgeGPT
-BingImageCreator
