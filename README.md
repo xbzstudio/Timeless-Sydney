@@ -87,5 +87,5 @@ var setting = {
 ## 鸣谢：
 
 [Bing-Chat](https://github.com/XiaoXinYo/Bing-Chat)的开发者[XiaoXinYo](https://github.com/XiaoXinYo)  
-本项目的[BingServer.py](https://github.com/xbzstudio/BingAI-Client/blob/main/BingAiSever/BingServer.py)就是他开发的！  
+本项目的[BingServer.py](https://github.com/xbzstudio/BingAI-Client/blob/main/BingServer.py)就是他开发的！  
 （当然本人也在当中增加了许些功能！）
