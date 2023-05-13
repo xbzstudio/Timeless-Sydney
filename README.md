@@ -1,5 +1,7 @@
 <h1 align="center">BingAI-Client</h1>
 
+[![](https://img.shields.io/badge/LICENSE-MIT-green)](https://github.com/xbzstudio/BingAI-Client/blob/main/LICENSE)![](https://img.shields.io/badge/Language-Python-blue)![](https://img.shields.io/badge/Language-Javascript-yellow)[![](https://img.shields.io/badge/Github-xbzstudio-red)](https://github.com/xbzstudio)[![](https://img.shields.io/badge/Studio-%E4%B8%8B%E5%8C%97%E6%B3%BD%E5%B7%A5%E4%BD%9C%E5%AE%A4-red)](https://github.com/XiaBeiZe-Studio2022)
+
 BingAI-Client提供了Microsoft New Bing的web客户端和服务端。客户端基于[Angular](https://angular.cn/)，服务端基于[FastAPI](https://fastapi.tiangolo.com/zh/)和[EdgeGPT](https://github.com/acheong08/EdgeGPT)。在本地部署好New Bing后，运行服务端程序即可开始使用客户端。如果有需要，也可以在服务器上部署New Bing，并在本地连接到服务器的New Bing。服务端将会自动将Bing切换至Sydney模式以解除麻烦的限制。
 
 部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
