@@ -1,6 +1,6 @@
-# BingAI-Client
+<h1 align="center">BingAI-Client</h1>
 
-BingAI-Client是一个基于[AngularJS](https://angular.cn/)和的New Bing web客户端，只要您在本地完成New Bing的部署并运行服务端程序，或连接到一个部署了BingAI-Client并开启了服务端程序的服务器，即可开始使用BingAI-Client。
+BingAI-Client提供了Microsoft New Bing的web客户端和服务端。客户端基于[Angular](https://angular.cn/)，服务端基于[FastAPI](https://fastapi.tiangolo.com/zh/)和[EdgeGPT](https://github.com/acheong08/EdgeGPT)。在本地部署好New Bing后，运行服务端程序即可开始使用客户端。如果有需要，也可以在服务器上部署New Bing，并在本地连接到服务器的New Bing。服务端将会自动将Bing切换至Sydney模式以解除麻烦的限制。
 
 部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
 
@@ -16,11 +16,11 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 
 然后到浏览器中安装插件[Cookie Editor](https://microsoftedge.microsoft.com/addons/detail/cookie-editor/ajfboaconbpkglpfanbmlfgojgndmhmc)。
 
-安装完成后，打开你的VPN，来到[New Bing官方网站](https://bing.com/new)，进入和bing聊天的界面。然后点开Cookie Editor，按下图片中的按钮：
+安装完成后，打开你的VPN，来到[Microsoft New Bing](https://bing.com/new)，进入和New Bing聊天的界面。然后点开Cookie Editor，按下图片中的按钮：
 
 ![image](https://user-images.githubusercontent.com/119436353/235375933-d7e81988-fc6b-423b-841f-98575d310e32.png)
 
-然后就可以了。按完之后，打开项目文件夹，打开根目录下的`cookie.json`，ctrl+v把刚才复制到的东西黏贴进去，保存文件，然后退出。
+然后就可以了。按完之后，打开项目文件夹，打开根目录下的`cookie.json`，按下ctrl+v把刚才复制到的东西黏贴进去，保存文件，然后退出。
 
 按下 `win + r` 会弹出一个窗口，在文本框中输入cmd，然后回车，就会进入终端。在终端中，依次输入这几个命令并回车：
 
@@ -40,9 +40,7 @@ pip install BingImageCreator
 pip install --upgrade EdgeGPT
 ```
 
-接下来，程序会询问你是否允许别的主机连接（即开放给别的主机使用New Bing），如果选择true，你就可以使用你的公网ip、内网ip、回环地址和打开本地文件来访问BingAI-Client客户端；如果选择false，就只能用回环地址和打开本地文件夹来访问BingAI-Client客户端。
-
-如果您选择打开本地文件以外的方法使用BingAI-Clint客户端，就要在ip后加上/webui。
+接下来，程序会询问你是否允许别的主机连接（即开放给别的主机使用New Bing），如果选择true，你就可以使用你的公网ip、内网ip、回环地址和打开本地文件来访问BingAI-Client客户端；如果选择false，就只能用回环地址和打开本地文件来访问BingAI-Client客户端。如果您选择打开本地文件以外的方法使用BingAI-Clint客户端，就要在ip后加上/webui。
 
 另外，请使用http协议访问。暂不支持https。
 
@@ -52,7 +50,7 @@ pip install --upgrade EdgeGPT
 
 记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
 
-如果您有特殊需求，可以访问[BingAI-Client在线版](https://xbzstudio.github.io/BingAI-Client/) 。但是架在这个Github Pages上的客户端的默认设置不能被你所更改，而且还是需要你自己运行服务端程序。如果你既想使用自己的默认设置，又想用别的服务器请求New Bing的响应，可以将BingAI-Client架在你的服务器上，使用在本地默认设置中将HOST设为你要连接到的服务器公网ip+端口，然后打开本地index.html文件，即可依赖你的服务器与New Bing对话，并且不用在本地开启BingServer.py（服务器开启即可）。如果想在网站上用自己的默认设置与New Bing对话，可以在你的服务器中自行将默认设置设置为你想要的，然后使用你的服务器的`公网ip/域名+端口/webui`访问你的定制版在线BingAI-Client，也是不用在本地开启BingServer.py（服务器开启即可）。
+如果您有特殊需求，可以访问[BingAI-Client在线版](https://xbzstudio.github.io/BingAI-Client/) 。但是架在这个Github Pages上的客户端的默认设置不能被你所更改，而且还是需要你自己运行服务端程序。如果你既想使用自己的默认设置，又想用别的服务器请求New Bing的响应，可以将BingAI-Client架在你的服务器上，使用在本地默认设置中将HOST设为你要连接到的服务器公网ip+端口，然后打开本地index.html文件，即可依赖你的服务器与New Bing对话，并且不用在本地开启BingServer.py（服务器开启即可），并使用自己的默认设置。如果想在网站上用自己的默认设置与New Bing对话，可以在你的服务器中自行将默认设置设置为你想要的，然后使用你的服务器的`公网ip/域名+端口/webui`访问你的定制版在线BingAI-Client，也是不用在本地开启BingServer.py（服务器开启即可）。
 
 ## 2，配置New Bing
 
@@ -66,12 +64,15 @@ var setting = {
     HOST:'127.0.0.1', //你要连接到的服务器IP或域名，如果BingAI服务器端口不为80，请在后面加上":端口值"。默认为127.0.0.1，即为访问本地服务器。
     autoTranslate:true, //是否默认启用自动翻译，true为是，false为否
     tokenToServer:true, //是否默认启用连续对话，true为是，false为否
+    autoScroll:true, //是否在Bing回复送达后自动滚动至页面底部
+    chatMoreTimes:true, //是否自动突破20条对话限制
     chatStyle:"creative", //与Bing AI聊天时选用的聊天风格，balanced代表平衡，creative代表创造力，precise代表精确性
     tips:"", //在新的主题开始时的第一条对话前插入的提示，null和空的英文双引号（""）表示没有。
     fontColor:"white", //你和Bing AI在消息框中的消息字体颜色
     nameColor:"#dadada", //你和Bing AI显示名字的颜色
-    backgroundUrl:"./src/images/Background.jpg" //背景图片的url地址，默认为项目文件中的Background.jpg
-
+    backgroundUrl:"./src/images/Background.jpg", //背景图片的url地址，默认为项目文件中的Background.jpg
+    saveChatTimes:20 //最大保存聊天记录数量
+    
 };
 ```
 
