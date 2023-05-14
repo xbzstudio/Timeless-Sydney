@@ -1,0 +1,5 @@
+fastapi
+python-multipart
+uvicorn
+EdgeGPT
+BingImageCreator
