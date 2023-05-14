@@ -29,6 +29,7 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 按下 `win + r` 会弹出一个窗口，在文本框中输入cmd，然后回车，就会进入终端。在终端中，输入这个命令并回车：
 
 ```
+cd 你的项目文件夹根目录（如C:\Users\33664\OneDrive\XBZ-BingClient）
 pip install -r requirements.txt
 ```
 
@@ -38,7 +39,6 @@ pip install -r requirements.txt
 
 ```
 pip install --upgrade EdgeGPT
-
 ```
 
 接下来，程序会询问你是否允许别的主机连接（即开放给别的主机使用New Bing），如果选择true，你就可以使用你的公网ip、内网ip、回环地址和打开本地文件来访问BingAI-Client客户端；如果选择false，就只能用回环地址和打开本地文件来访问BingAI-Client客户端。如果您选择打开本地文件以外的方法使用BingAI-Clint客户端，就要在ip后加上/webui。
