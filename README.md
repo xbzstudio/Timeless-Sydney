@@ -26,10 +26,15 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 
 然后就可以了。按完之后，打开项目文件夹，打开根目录下的`cookie.json`，按下ctrl+v把刚才复制到的东西黏贴进去，保存文件，然后退出。
 
-按下 `win + r` 会弹出一个窗口，在文本框中输入cmd，然后回车，就会进入终端。在终端中，输入这个命令并回车：
+用文件资源管理器打开项目文件夹，然后右键文件资源管理器空白的地方，点击“在终端里打开”，然后在Power Shell里输入以下命令并回车：
+```
+pip install -r requirements.txt
+```
+
+如果没有“在终端里打开”，请按下`win + r`组合键，弹出运行窗口，在文本框中输入cmd并回车。就会弹出终端。然后在终端中输入以下命令并回车：
 
 ```
-cd 你的项目文件夹根目录（如C:\Users\33664\OneDrive\XBZ-BingClient）
+cd 你的项目文件夹的绝对路径（如C:\Users\33664\OneDrive\XBZ-BingClient）
 pip install -r requirements.txt
 ```
 
