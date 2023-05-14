@@ -93,3 +93,5 @@ var setting = {
 （当然本人也在当中增加了许些功能！）
 
 [InterestingDarkness](https://github.com/InterestingDarkness)为BingAI-Client开发了切换Sydney模式的功能 ，十分感谢！
+
+[Nothingness-Void](https://github.com/Nothingness-Void)为BingAI-Client添加了requirements.txt。
