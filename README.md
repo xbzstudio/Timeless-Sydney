@@ -4,7 +4,27 @@
 <a href="https://github.com/xbzstudio/BingAI-Client/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-green"></a><img src="https://img.shields.io/badge/Language-Python-blue"><img src="https://img.shields.io/badge/Language-Javascript-yellow"><a href="https://github.com/xbzstudio"><img src="https://img.shields.io/badge/Github-xbzstudio-red"></a><a href="https://github.com/XiaBeiZe-Studio2022"><img src="https://img.shields.io/badge/Studio-%E4%B8%8B%E5%8C%97%E6%B3%BD%E5%B7%A5%E4%BD%9C%E5%AE%A4-red"></a>
 </p>
 
+# 介绍
+
 BingAI-Client提供了Microsoft New Bing的web客户端和服务端。客户端基于[Angular](https://angular.cn/)，服务端基于[FastAPI](https://fastapi.tiangolo.com/zh/)和[EdgeGPT](https://github.com/acheong08/EdgeGPT)。在本地部署好New Bing后，运行服务端程序即可开始使用客户端。如果有需要，也可以在服务器上部署New Bing，并在本地连接到服务器的New Bing。服务端将会自动将Bing切换至Sydney模式以解除麻烦的限制。
+
+# 开始
+
+### 视频教程
+
+(因为github的文件大小限制,所以才会这么模糊,请见谅!如果想看高清的视频看[这个](https://v.superbed.cn/play/6460ccc70d2dde5777223e9c)):
+
+
+
+
+
+https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8b4a-0228ef04916b
+
+
+
+
+
+## 图文教程
 
 部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
 
@@ -100,3 +120,5 @@ var setting = {
 [InterestingDarkness](https://github.com/InterestingDarkness)为BingAI-Client开发了切换Sydney模式的功能 ，十分感谢！
 
 [Nothingness-Void](https://github.com/Nothingness-Void)为BingAI-Client添加了requirements.txt。
+
+[Viopsa233](https://github.com/viopsa233)为BingAI-Client添加了视频教程
