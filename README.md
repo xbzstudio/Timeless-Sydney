@@ -54,7 +54,7 @@ pip install -r requirements.txt
 如果没有“在终端里打开”，请按下`win + r`组合键，弹出运行窗口，在文本框中输入cmd并回车。就会弹出终端。然后在终端中输入以下命令并回车：
 
 ```
-cd 你的项目文件夹的绝对路径（如C:\Users\33664\OneDrive\XBZ-BingClient）
+cd /d 你的项目文件夹的绝对路径（如C:\Users\33664\OneDrive\XBZ-BingClient）
 pip install -r requirements.txt
 ```
 
