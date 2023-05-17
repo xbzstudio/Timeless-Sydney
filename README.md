@@ -48,14 +48,14 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 
 用文件资源管理器打开项目文件夹，然后右键文件资源管理器空白的地方，点击“在终端里打开”，然后在Power Shell里输入以下命令并回车：
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
 
 如果没有“在终端里打开”，请按下`win + r`组合键，弹出运行窗口，在文本框中输入cmd并回车。就会弹出终端。然后在终端中输入以下命令并回车：
 
 ```
 cd /d 你的项目文件夹的绝对路径（如C:\Users\33664\OneDrive\XBZ-BingClient）
-pip install -r requirements.txt
+pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
 
 过程可能会有点长。第三方包全部安装完毕后，在项目文件根目录中打开终端，然后输入命令 `python ./BingServer.py` ，如果没有报错，那就说明成功了。
