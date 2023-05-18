@@ -10,21 +10,47 @@ BingAI-Client提供了Microsoft New Bing的web客户端和服务端。客户端�
 
 # 开始
 
-### 视频教程
+<details>
+  <summary>
 
+## 视频教程
+
+ </summary>
+     
 (因为github的文件大小限制,所以才会这么模糊,请见谅!如果想看高清的视频看[这个](https://v.superbed.cn/play/6460ccc70d2dde5777223e9c)):
-
-
-
 
 
 https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8b4a-0228ef04916b
 
 
+</details>
 
+<details>
+  <summary>
 
 
 ## 图文教程
+</summary>
+
+
+# 自动部署
+
+
+### 运行根目录下的run.bat
+
+接下来，程序会询问你是否允许别的主机连接（即开放给别的主机使用New Bing），如果选择true，你就可以使用你的公网ip、内网ip、回环地址和打开本地文件来访问BingAI-Client客户端；如果选择false，就只能用回环地址和打开本地文件来访问BingAI-Client客户端。如果您选择打开本地文件以外的方法使用BingAI-Clint客户端，就要在ip后加上/webui。
+
+另外，请使用http协议访问。暂不支持https。
+
+询问完是否开放给别的主机后，程序还会询问你部署至的端口。可以自行填写，保证不与别的程序冲突即可。如果不填写80（默认端口），在使用打开本地文件以外的方法访问时，需要在ip或域名后加端口号（ip/域名 + :端口号）。
+
+到这里，你就成功地部署在本地的New Bing。接下来，打开项目根目录下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
+
+记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
+
+如果您有特殊需求，可以访问[BingAI-Client在线版](https://xbzstudio.github.io/BingAI-Client/) 。但是架在这个Github Pages上的客户端的默认设置不能被你所更改，而且还是需要你自己运行服务端程序。如果你既想使用自己的默认设置，又想用别的服务器请求New Bing的响应，可以将BingAI-Client架在你的服务器上，使用在本地默认设置中将HOST设为你要连接到的服务器公网ip+端口，然后打开本地index.html文件，即可依赖你的服务器与New Bing对话，并且不用在本地开启BingServer.py（服务器开启即可），并使用自己的默认设置。如果想在网站上用自己的默认设置与New Bing对话，可以在你的服务器中自行将默认设置设置为你想要的，然后使用你的服务器的`公网ip/域名+端口/webui`访问你的定制版在线BingAI-Client，也是不用在本地开启BingServer.py（服务器开启即可）。
+
+# 手动部署
 
 部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
 
@@ -105,6 +131,11 @@ var setting = {
 接下来你只要根据这段代码的中文注释来更改配置即可更改你的默认设置。
 在更改你的默认设置后，打开本地客户端时，你的聊天设置会更改为默认设置中的那样。例如你在默认设置中表示你想要让chatStyle更改为"balanced"，那么在打开本地客户端时，聊天设置中的聊天风格设置将会自动更改为balanced。
 
+
+</details>
+
+# 其他
+
 ### 头像更改
 
 进入./src/images文件夹，里面有两张图片，一个是`User.png`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"User.png"或"Bing.png"。
@@ -150,4 +181,4 @@ var setting = {
 
 [Nothingness-Void](https://github.com/Nothingness-Void)为BingAI-Client添加了requirements.txt。
 
-[Viopsa233](https://github.com/viopsa233)为BingAI-Client添加了视频教程
+[Viopsa233](https://github.com/viopsa233)为BingAI-Client添加了视频教程,添加了run.bat文件
