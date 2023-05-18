@@ -36,6 +36,19 @@ https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8
 # 自动部署
 
 
+
+首先确保你有高版本的Python（推荐3.10），这里不过多赘述。
+
+首先下载本项目的ZIP压缩包，解压。
+
+然后到浏览器中安装插件[Cookie Editor](https://microsoftedge.microsoft.com/addons/detail/cookie-editor/ajfboaconbpkglpfanbmlfgojgndmhmc)。
+
+安装完成后，打开你的VPN，来到[Microsoft New Bing](https://bing.com/new)，进入和New Bing聊天的界面。然后点开Cookie Editor，按下图片中的按钮：
+
+![image](https://user-images.githubusercontent.com/119436353/235375933-d7e81988-fc6b-423b-841f-98575d310e32.png)
+
+然后就可以了。按完之后，打开项目文件夹，打开根目录下的`cookie.json`，按下ctrl+v把刚才复制到的东西黏贴进去，保存文件，然后退出。
+
 ### 运行根目录下的run.bat
 
 接下来，程序会询问你是否允许别的主机连接（即开放给别的主机使用New Bing），如果选择true，你就可以使用你的公网ip、内网ip、回环地址和打开本地文件来访问BingAI-Client客户端；如果选择false，就只能用回环地址和打开本地文件来访问BingAI-Client客户端。如果您选择打开本地文件以外的方法使用BingAI-Clint客户端，就要在ip后加上/webui。
