@@ -31,6 +31,12 @@ https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8
 
 ## 图文教程
 </summary>
+  
+部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
+
+相关链接：  
+Python 3.10.10下载：[https://www.python.org/downloads/release/python-31010/](https://www.python.org/downloads/release/python-31010/)  
+Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe)
 
 
 # 自动部署
@@ -68,12 +74,6 @@ https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8
 如果您有特殊需求，可以访问[BingAI-Client在线版](https://xbzstudio.github.io/BingAI-Client/) 。但是架在这个Github Pages上的客户端的默认设置不能被你所更改，而且还是需要你自己运行服务端程序。如果你既想使用自己的默认设置，又想用别的服务器请求New Bing的响应，可以将BingAI-Client架在你的服务器上，使用在本地默认设置中将HOST设为你要连接到的服务器公网ip+端口，然后打开本地index.html文件，即可依赖你的服务器与New Bing对话，并且不用在本地开启BingServer.py（服务器开启即可），并使用自己的默认设置。如果想在网站上用自己的默认设置与New Bing对话，可以在你的服务器中自行将默认设置设置为你想要的，然后使用你的服务器的`公网ip/域名+端口/webui`访问你的定制版在线BingAI-Client，也是不用在本地开启BingServer.py（服务器开启即可）。
 
 # 手动部署
-
-部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
-
-相关链接：  
-Python 3.10.10下载：[https://www.python.org/downloads/release/python-31010/](https://www.python.org/downloads/release/python-31010/)  
-Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe)
 
 ## 1，安装并部署BingAI-Client
 
