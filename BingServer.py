@@ -16,17 +16,15 @@ import uvicorn
 import os
 from mimetypes import guess_type
 
-# server = input('是否接受来自别的计算机的请求（回答true或false）：')
-# while server != 'true' and server !='false':
-#     server = input('是否接受来其它的主机的请求（回答true或false）：')
-# server = bool(server)
-# if server:
-#     HOST = '0.0.0.0'
-# else:
-#     HOST = '127.0.0.1'
-# PORT = int(input('请输入服务器端口号（80为默认）：'))
-HOST = '0.0.0.0'
-PORT = 80
+server = input('是否接受来自别的计算机的请求（回答true或false）：')
+while server != 'true' and server !='false':
+    server = input('是否接受来其它的主机的请求（回答true或false）：')
+server = bool(server)
+if server:
+    HOST = '0.0.0.0'
+else:
+    HOST = '127.0.0.1'
+PORT = int(input('请输入服务器端口号（80为默认）：'))
 PROXY = ''
 COOKIE_FILE_PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/cookie.json'
 
