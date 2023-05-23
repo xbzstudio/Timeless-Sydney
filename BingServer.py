@@ -395,7 +395,7 @@ async def get_site():
     content_type, _ = guess_type(filename)
     return Response(content, media_type=content_type)
 
-@APP.get("/src/js/{filename}")
+@APP.get("/js/{filename}")
 async def get_site(filename):
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/js/' + str(filename)
 
@@ -408,7 +408,7 @@ async def get_site(filename):
     content_type, _ = guess_type(filename)
     return Response(content, media_type=content_type)
 
-@APP.get("/src/css/{filename}")
+@APP.get("/css/{filename}")
 async def get_site(filename):
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/css/' + str(filename)
 
@@ -421,7 +421,7 @@ async def get_site(filename):
     content_type, _ = guess_type(filename)
     return Response(content, media_type=content_type)
 
-@APP.get("/src/images/{filename}")
+@APP.get("/images/{filename}")
 async def get_site(filename):
 
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/images/' + str(filename)
