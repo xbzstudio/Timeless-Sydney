@@ -388,7 +388,7 @@ async def image(request: Request) -> Response:
 
 @APP.get("/webui")
 async def get_site():
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/index.html'
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/index.html'
     with open(filename, mode='r', encoding='utf-8') as f:
         content = f.read()
 
@@ -397,7 +397,7 @@ async def get_site():
 
 @APP.get("/src/js/{filename}")
 async def get_site(filename):
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/src/js/' + str(filename)
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/js/' + str(filename)
 
     if not os.path.isfile(filename):
         return Response(status_code=404)
@@ -410,7 +410,7 @@ async def get_site(filename):
 
 @APP.get("/src/css/{filename}")
 async def get_site(filename):
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/src/css/' + str(filename)
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/css/' + str(filename)
 
     if not os.path.isfile(filename):
         return Response(status_code=404)
@@ -424,7 +424,7 @@ async def get_site(filename):
 @APP.get("/src/images/{filename}")
 async def get_site(filename):
 
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/src/images/' + str(filename)
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/images/' + str(filename)
 
     if not os.path.isfile(filename):
         return Response(status_code=404)
