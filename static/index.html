@@ -283,8 +283,8 @@
                 message = message + messageData[k].data + '已发送电子邮件. ' + messageData[k].data;
               }
             }
-            $scope.replies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:message,urls:[]});
-            $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
+            $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:message,urls:[]});
+            $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
             temp = 1;
             if ($scope.autoTranslate){
               ws.send('{"style":"'+$scope.chatStyle+'","question":"'+message.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
@@ -302,7 +302,7 @@
 
         $scope.clearToken = function(){
           $scope.token = '';
-          $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:'已开启新主题，New Bing已重置。', urls:[]});
+          $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:'已开启新主题，New Bing已重置。', urls:[]});
           console.log($scope.replies);
           ws.close();
           ConnectToServer();
@@ -322,10 +322,10 @@
             var key = $scope.userReplyData.slice(15, $scope.userReplyData.length);
             var images = new XMLHttpRequest();
             $scope.readyToAnswer = false;
-            $scope.replies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:'请帮我生成图片：'+key,urls:[]});
-            $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
-            $scope.realReplies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:'请帮我生成图片：'+key,urls:[]});
-            $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
+            $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:'请帮我生成图片：'+key,urls:[]});
+            $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+            $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:'请帮我生成图片：'+key,urls:[]});
+            $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
             if ($scope.HTTPSMODE){
               images.open('GET', 'https://'+$scope.host+'/image'+'?keyword='+key, true);
             }
@@ -359,10 +359,10 @@
             if ($scope.tips != "" && $scope.tips != null){ //有tips的情况
               if ($scope.tokenToServer != true || $scope.token == ''){ //有tips无token情况
                   $scope.readyToAnswer = false;
-                  $scope.replies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:$scope.tips,urls:[]});
-                  $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
-                  $scope.realReplies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:$scope.tips,urls:[]});
-                  $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
+                  $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.tips,urls:[]});
+                  $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                  $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.tips,urls:[]});
+                  $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
                   if ($scope.autoTranslate){
                     ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.tips.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
                   }
@@ -372,10 +372,10 @@
               }
               else{
                 if ($scope.userReplyData != ''){ //有tips有token情况
-                  $scope.replies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:$scope.userReplyData,urls:[]});
-                  $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
-                  $scope.realReplies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:$scope.userReplyData,urls:[]});
-                  $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
+                  $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                  $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                  $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                  $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
                   $scope.dataTemp = '';
                   $scope.readyToAnswer = false;
                   if ($scope.autoTranslate){
@@ -390,10 +390,10 @@
             }
             else{ //无tips的情况
               if ($scope.userReplyData != ''){
-                $scope.replies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:$scope.userReplyData,urls:[]});
-                $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
-                $scope.realReplies.push({name:'你',className:'userReply', imgURL:'images/User.png', data:$scope.userReplyData,urls:[]});
-                $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'images/Bing.png', data:"",urls:[]});
+                $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
                 $scope.dataTemp = '';
                 $scope.readyToAnswer = false;
                 if ($scope.autoTranslate){
