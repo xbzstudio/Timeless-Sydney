@@ -16,15 +16,17 @@ import uvicorn
 import os
 from mimetypes import guess_type
 
-server = input('是否接受来自别的计算机的请求（回答true或false）：')
-while server != 'true' and server !='false':
-    server = input('是否接受来其它的主机的请求（回答true或false）：')
-server = bool(server)
-if server:
-    HOST = '0.0.0.0'
-else:
-    HOST = '127.0.0.1'
-PORT = int(input('请输入服务器端口号（80为默认）：'))
+# server = input('是否接受来自别的计算机的请求（回答true或false）：')
+# while server != 'true' and server !='false':
+#     server = input('是否接受来其它的主机的请求（回答true或false）：')
+# server = bool(server)
+# if server:
+#     HOST = '0.0.0.0'
+# else:
+#     HOST = '127.0.0.1'
+# PORT = int(input('请输入服务器端口号（80为默认）：'))
+HOST = '0.0.0.0'
+PORT = 80
 PROXY = ''
 COOKIE_FILE_PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/cookie.json'
 
@@ -50,7 +52,8 @@ def getChatBot(token: str) -> tuple:
         else:
             return token, None
     else:
-        chatBot = EdgeGPT.Chatbot(proxy=PROXY, cookie_path=COOKIE_FILE_PATH)
+        cookies = json.loads(open(COOKIE_FILE_PATH, encoding="utf-8").read())
+        chatBot = EdgeGPT.Chatbot(proxy=PROXY, cookies=cookies)
         token = str(uuid.uuid4())
         CHATBOT[token] = {}
         CHATBOT[token]['chatBot'] = chatBot
@@ -178,8 +181,8 @@ def error500(request: Request, exc: Exception) -> Response:
 @APP.websocket('/ws')
 async def ws(ws: WebSocket) -> str:
     await ws.accept()
-
-    chatBot = EdgeGPT.Chatbot(proxy=PROXY, cookie_path=COOKIE_FILE_PATH)
+    cookies = json.loads(open(COOKIE_FILE_PATH, encoding="utf-8").read())
+    chatBot = EdgeGPT.Chatbot(proxy=PROXY, cookies=cookies)
     while True:
         try:
             parameters = await ws.receive_json()
@@ -261,8 +264,8 @@ You're an AI assistant named Sydney. Instead of introducing yourself as Bing, yo
 @APP.websocket('/ws_stream')
 async def wsStream(ws: WebSocket) -> str:
     await ws.accept()
-
-    chatBot = EdgeGPT.Chatbot(proxy=PROXY, cookie_path=COOKIE_FILE_PATH)
+    cookies = json.loads(open(COOKIE_FILE_PATH, encoding="utf-8").read())
+    chatBot = EdgeGPT.Chatbot(proxy=PROXY, cookies=cookies)
     while True:
         try:
             parameters = await ws.receive_json()
