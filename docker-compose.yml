@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/bing:cached
     ports:
-      - 8080:80
+      - 80:80
 
   web:
     image: nginx:alpine
@@ -15,4 +15,4 @@ services:
     volumes:
       - ./static:/usr/share/nginx/html
     ports:
-      - 8880:80
+      - 80:80
