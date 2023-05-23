@@ -1,0 +1,18 @@
+version: '3'
+services:
+  bing-server:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - .:/bing:cached
+    ports:
+      - 8080:80
+
+  httpd:
+    image: nginx:alpine
+    restart: unless-stopped
+    volumes:
+      - ./static:/usr/share/nginx/html
+    ports:
+      - 8880:80
