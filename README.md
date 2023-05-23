@@ -67,7 +67,7 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 
 询问完是否开放给别的主机后，程序还会询问你部署至的端口。可以自行填写，保证不与别的程序冲突即可。如果不填写80（默认端口），在使用打开本地文件以外的方法访问时，需要在ip或域名后加端口号（ip/域名 + :端口号）。
 
-到这里，你就成功地部署在本地的New Bing。接下来，打开项目根目录下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
+到这里，你就成功地部署在本地的New Bing。接下来，打开static下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
 
 记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
 
@@ -113,7 +113,7 @@ pip install --upgrade EdgeGPT
 
 询问完是否开放给别的主机后，程序还会询问你部署至的端口。可以自行填写，保证不与别的程序冲突即可。如果不填写80（默认端口），在使用打开本地文件以外的方法访问时，需要在ip或域名后加端口号（ip/域名 + :端口号）。
 
-到这里，你就成功地部署在本地的New Bing。接下来，打开项目根目录下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
+到这里，你就成功地部署在本地的New Bing。接下来，打开static下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
 
 记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
 
@@ -125,7 +125,7 @@ pip install --upgrade EdgeGPT
 
 ## 默认聊天设置更改
 
-进入./src/js文件夹后，就可以看到一个名为“setting.js”的文件。打开这个文件，里面储存着一段代码，默认是这样：
+进入./static/src/js文件夹后，就可以看到一个名为“setting.js”的文件。打开这个文件，里面储存着一段代码，默认是这样：
 
 ```javascript
 var setting = {
@@ -154,7 +154,7 @@ var setting = {
 
 ### 头像更改
 
-进入./src/images文件夹，里面有两张图片，一个是`User.png`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"User.png"或"Bing.png"。
+进入./static/src/images文件夹，里面有两张图片，一个是`User.png`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"User.png"或"Bing.png"。
 
 ## 一些疑难解答：
 
@@ -230,3 +230,5 @@ var setting = {
 [Nothingness-Void](https://github.com/Nothingness-Void)为BingAI-Client添加了requirements.txt。
 
 [Viopsa233](https://github.com/viopsa233)为BingAI-Client添加了视频教程,添加了run.bat文件（旧版）。
+
+[fyang93](https://github.com/fyang93)为BingAI-Client添加了Dockerfile。
