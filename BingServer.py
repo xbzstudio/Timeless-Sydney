@@ -397,7 +397,7 @@ async def get_site():
 
 @APP.get("/js/{filename}")
 async def get_site(filename):
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/js/' + str(filename)
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/js/' + str(filename)
 
     if not os.path.isfile(filename):
         return Response(status_code=404)
@@ -410,7 +410,7 @@ async def get_site(filename):
 
 @APP.get("/css/{filename}")
 async def get_site(filename):
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/css/' + str(filename)
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/css/' + str(filename)
 
     if not os.path.isfile(filename):
         return Response(status_code=404)
@@ -424,7 +424,7 @@ async def get_site(filename):
 @APP.get("/images/{filename}")
 async def get_site(filename):
 
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/src/images/' + str(filename)
+    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/images/' + str(filename)
 
     if not os.path.isfile(filename):
         return Response(status_code=404)
