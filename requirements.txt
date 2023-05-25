@@ -1,5 +1,5 @@
 fastapi
 python-multipart
 uvicorn
-EdgeGPT
+EdgeGPT==0.4.4
 BingImageCreator
