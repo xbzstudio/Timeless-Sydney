@@ -232,3 +232,5 @@ var setting = {
 [Viopsa233](https://github.com/viopsa233)为BingAI-Client添加了视频教程,添加了run.bat文件（旧版）。
 
 [fyang93](https://github.com/fyang93)为BingAI-Client添加了Dockerfile。
+
+[liukaixiang817](https://github.com/liukaixiang817)为BingAI-Client更改了BingServer.py的错误。
