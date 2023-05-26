@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="./js/setting.js"></script>
-    <title>Bing AI v1.5</title>
+    <title>Bing AI v1.6</title>
     <link rel="stylesheet" type="text/css" href="./css/main.css"></link>
   </head>
   <body style="margin:0px;background-size:cover;background-attachment: fixed;">
@@ -318,94 +318,96 @@
         }
 
         $scope.getReply = function(){
-          if ($scope.userReplyData.slice(0,15) == '/create images '){
-            var key = $scope.userReplyData.slice(15, $scope.userReplyData.length);
-            var images = new XMLHttpRequest();
-            $scope.readyToAnswer = false;
-            $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:'请帮我生成图片：'+key,urls:[]});
-            $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"Loading for New Bing to create images......",urls:[]});
-            $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:'请帮我生成图片：'+key,urls:[]});
-            $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"Loading for New Bing to create images......",urls:[]});
-            if ($scope.HTTPSMODE){
-              images.open('GET', 'https://'+$scope.host+'/image'+'?keyword='+key, true);
-            }
-            else{
-              images.open('GET', 'http://'+$scope.host+'/image'+'?keyword='+key, true);
-            }
-            $scope.userReplyData = '';
-            images.setRequestHeader('Access-Control-Allow-Origin', '*');
-            images.onreadystatechange = function () {
-                if (images.readyState == 4) {
-                  if (images.status == 200){
-                    $scope.$apply(function(){
-                      $scope.realReplies[$scope.realReplies.length - 1].data = '已完成绘图！\n';
-                      $scope.replies[$scope.replies.length - 1].data = '已完成绘图！\n';
-                      var imageUrls = eval('('+images.responseText+')').data;
-                      var i;
-                      for (i = 0;i < imageUrls.length; i++){
-                        $scope.realReplies[$scope.realReplies.length - 1].urls.push({title : imageUrls[i], url : imageUrls[i]});
-                        $scope.replies[$scope.replies.length - 1].urls.push({title : imageUrls[i], url : imageUrls[i]});
-                      }
-                    });
-                  }
-                  $scope.$apply(function(){
-                    $scope.readyToAnswer = true;
-                  });
-                }
-            };
-            images.send();
-          }
-          else{
-            if ($scope.tips != "" && $scope.tips != null){ //有tips的情况
-              if ($scope.tokenToServer != true || $scope.token == ''){ //有tips无token情况
-                  $scope.readyToAnswer = false;
-                  $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.tips,urls:[]});
-                  $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
-                  $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.tips,urls:[]});
-                  $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
-                  if ($scope.autoTranslate){
-                    ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.tips.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
-                  }
-                  else{
-                    ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.tips.replaceAll('\n',' ')+'"}');
-                  }
-              }
-              else{
-                if ($scope.userReplyData != ''){ //有tips有token情况
-                  $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
-                  $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
-                  $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
-                  $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
-                  $scope.dataTemp = '';
-                  $scope.readyToAnswer = false;
-                  if ($scope.autoTranslate){
-                    ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
-                  }
-                  else{
-                    ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'"}');
-                  }
-                  $scope.userReplyData = '';
-                }
-              }
-            }
-            else{ //无tips的情况
-              if ($scope.userReplyData != ''){
-                $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
-                $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
-                $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
-                $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
-                $scope.dataTemp = '';
-                $scope.readyToAnswer = false;
-                if ($scope.autoTranslate){
-                  ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
+            if($scope.readyToAnswer){
+                if ($scope.userReplyData.slice(0,15) == '/create images '){
+                    var key = $scope.userReplyData.slice(15, $scope.userReplyData.length);
+                    var images = new XMLHttpRequest();
+                    $scope.readyToAnswer = false;
+                    $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:'请帮我生成图片：'+key,urls:[]});
+                    $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"Loading for New Bing to create images......",urls:[]});
+                    $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:'请帮我生成图片：'+key,urls:[]});
+                    $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"Loading for New Bing to create images......",urls:[]});
+                    if ($scope.HTTPSMODE){
+                    images.open('GET', 'https://'+$scope.host+'/image'+'?keyword='+key, true);
+                    }
+                    else{
+                    images.open('GET', 'http://'+$scope.host+'/image'+'?keyword='+key, true);
+                    }
+                    $scope.userReplyData = '';
+                    images.setRequestHeader('Access-Control-Allow-Origin', '*');
+                    images.onreadystatechange = function () {
+                        if (images.readyState == 4) {
+                        if (images.status == 200){
+                            $scope.$apply(function(){
+                            $scope.realReplies[$scope.realReplies.length - 1].data = '已完成绘图！\n';
+                            $scope.replies[$scope.replies.length - 1].data = '已完成绘图！\n';
+                            var imageUrls = eval('('+images.responseText+')').data;
+                            var i;
+                            for (i = 0;i < imageUrls.length; i++){
+                                $scope.realReplies[$scope.realReplies.length - 1].urls.push({title : imageUrls[i], url : imageUrls[i]});
+                                $scope.replies[$scope.replies.length - 1].urls.push({title : imageUrls[i], url : imageUrls[i]});
+                            }
+                            });
+                        }
+                        $scope.$apply(function(){
+                            $scope.readyToAnswer = true;
+                        });
+                        }
+                    };
+                    images.send();
                 }
                 else{
-                  ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'"}');
+                    if ($scope.tips != "" && $scope.tips != null){ //有tips的情况
+                    if ($scope.tokenToServer != true || $scope.token == ''){ //有tips无token情况
+                        $scope.readyToAnswer = false;
+                        $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.tips,urls:[]});
+                        $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                        $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.tips,urls:[]});
+                        $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                        if ($scope.autoTranslate){
+                            ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.tips.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
+                        }
+                        else{
+                            ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.tips.replaceAll('\n',' ')+'"}');
+                        }
+                    }
+                    else{
+                        if ($scope.userReplyData != ''){ //有tips有token情况
+                        $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                        $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                        $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                        $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                        $scope.dataTemp = '';
+                        $scope.readyToAnswer = false;
+                        if ($scope.autoTranslate){
+                            ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
+                        }
+                        else{
+                            ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'"}');
+                        }
+                        $scope.userReplyData = '';
+                        }
+                    }
+                    }
+                    else{ //无tips的情况
+                    if ($scope.userReplyData != ''){
+                        $scope.replies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                        $scope.replies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                        $scope.realReplies.push({name:'你',className:'userReply', imgURL:'./images/User.png', data:$scope.userReplyData,urls:[]});
+                        $scope.realReplies.push({name:'New Bing',className:'bingReply', imgURL:'./images/Bing.png', data:"",urls:[]});
+                        $scope.dataTemp = '';
+                        $scope.readyToAnswer = false;
+                        if ($scope.autoTranslate){
+                        ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'（请使用中文回复我）'+'"}');
+                        }
+                        else{
+                        ws.send('{"style":"'+$scope.chatStyle+'","question":"'+$scope.userReplyData.replaceAll('\n',' ')+'"}');
+                        }
+                        $scope.userReplyData = '';
+                    }
+                    }
                 }
-                $scope.userReplyData = '';
-              }
             }
-          }
         }
 
         ConnectToServer();
