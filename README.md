@@ -4,20 +4,20 @@
 <a href="https://github.com/xbzstudio/BingAI-Client/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-green"></a><img src="https://img.shields.io/badge/Language-Python-blue"><img src="https://img.shields.io/badge/Language-Javascript-yellow"><a href="https://github.com/xbzstudio"><img src="https://img.shields.io/badge/Github-xbzstudio-red"></a><a href="https://github.com/XiaBeiZe-Studio2022"><img src="https://img.shields.io/badge/Studio-%E4%B8%8B%E5%8C%97%E6%B3%BD%E5%B7%A5%E4%BD%9C%E5%AE%A4-red"></a>
 </p>
 
-# ½éÉÜ
+# ä»‹ç»
 
-BingAI-ClientÌá¹©ÁËMicrosoft New BingµÄweb¿Í»§¶ËºÍ·þÎñ¶Ë¡£¿Í»§¶Ë»ùÓÚ[Angular](https://angular.cn/)£¬·þÎñ¶Ë»ùÓÚ[FastAPI](https://fastapi.tiangolo.com/zh/)ºÍ[EdgeGPT](https://github.com/acheong08/EdgeGPT)¡£ÔÚ±¾µØ²¿ÊðºÃNew Bingºó£¬ÔËÐÐ·þÎñ¶Ë³ÌÐò¼´¿É¿ªÊ¼Ê¹ÓÃ¿Í»§¶Ë¡£Èç¹ûÓÐÐèÒª£¬Ò²¿ÉÒÔÔÚ·þÎñÆ÷ÉÏ²¿ÊðNew Bing£¬²¢ÔÚ±¾µØÁ¬½Óµ½·þÎñÆ÷µÄNew Bing¡£·þÎñ¶Ë½«»á×Ô¶¯½«BingÇÐ»»ÖÁSydneyÄ£Ê½ÒÔ½â³ýÂé·³µÄÏÞÖÆ¡£
+BingAI-Clientæä¾›äº†Microsoft New Bingçš„webå®¢æˆ·ç«¯å’ŒæœåŠ¡ç«¯ã€‚å®¢æˆ·ç«¯åŸºäºŽ[Angular](https://angular.cn/)ï¼ŒæœåŠ¡ç«¯åŸºäºŽ[FastAPI](https://fastapi.tiangolo.com/zh/)å’Œ[EdgeGPT](https://github.com/acheong08/EdgeGPT)ã€‚åœ¨æœ¬åœ°éƒ¨ç½²å¥½New BingåŽï¼Œè¿è¡ŒæœåŠ¡ç«¯ç¨‹åºå³å¯å¼€å§‹ä½¿ç”¨å®¢æˆ·ç«¯ã€‚å¦‚æžœæœ‰éœ€è¦ï¼Œä¹Ÿå¯ä»¥åœ¨æœåŠ¡å™¨ä¸Šéƒ¨ç½²New Bingï¼Œå¹¶åœ¨æœ¬åœ°è¿žæŽ¥åˆ°æœåŠ¡å™¨çš„New Bingã€‚æœåŠ¡ç«¯å°†ä¼šè‡ªåŠ¨å°†Bingåˆ‡æ¢è‡³Sydneyæ¨¡å¼ä»¥è§£é™¤éº»çƒ¦çš„é™åˆ¶ã€‚
 
-# ¿ªÊ¼
+# å¼€å§‹
 
 <details>
   <summary>
 
-## ÊÓÆµ½Ì³Ì£¨ÔÚ¾É°æÉÏÑÝÊ¾£¬½ö×÷²Î¿¼£©
+## è§†é¢‘æ•™ç¨‹ï¼ˆåœ¨æ—§ç‰ˆä¸Šæ¼”ç¤ºï¼Œä»…ä½œå‚è€ƒï¼‰
 
  </summary>
      
-(ÒòÎªgithubµÄÎÄ¼þ´óÐ¡ÏÞÖÆ,ËùÒÔ²Å»áÕâÃ´Ä£ºý,Çë¼ûÁÂ!Èç¹ûÏë¿´¸ßÇåµÄÊÓÆµ¿´[Õâ¸ö](https://v.superbed.cn/play/6460ccc70d2dde5777223e9c)):
+(å› ä¸ºgithubçš„æ–‡ä»¶å¤§å°é™åˆ¶,æ‰€ä»¥æ‰ä¼šè¿™ä¹ˆæ¨¡ç³Š,è¯·è§è°…!å¦‚æžœæƒ³çœ‹é«˜æ¸…çš„è§†é¢‘çœ‹[è¿™ä¸ª](https://v.superbed.cn/play/6460ccc70d2dde5777223e9c)):
 
 
 https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8b4a-0228ef04916b
@@ -29,208 +29,200 @@ https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8
   <summary>
 
 
-## Í¼ÎÄ½Ì³Ì
+## å›¾æ–‡æ•™ç¨‹
 </summary>
   
-²¿ÊðÇ°£¬È·±£ÄãÓµÓÐ `Python` µÄÎÈ¶¨¸ß°æ±¾£¨ÍÆ¼ö3.10£©£¬Ò»¸ö `VPN` £¬»¹ÓÐÒ»¸ö¿ÉÒÔÊ¹ÓÃNew BingµÄ `MicrosoftÕËºÅ` ¡£
+éƒ¨ç½²å‰ï¼Œç¡®ä¿ä½ æ‹¥æœ‰ `Python` çš„ç¨³å®šé«˜ç‰ˆæœ¬ï¼ˆæŽ¨è3.10ï¼‰ï¼Œä¸€ä¸ª `VPN` ï¼Œè¿˜æœ‰ä¸€ä¸ªå¯ä»¥ä½¿ç”¨New Bingçš„ `Microsoftè´¦å·` ã€‚
 
-Ïà¹ØÁ´½Ó£º  
-Python 3.10.10ÏÂÔØ£º[https://www.python.org/downloads/release/python-31010/](https://www.python.org/downloads/release/python-31010/)  
-GephÃÔÎíÍ¨ÏÂÔØ£º[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe)
-
-
-# ×Ô¶¯²¿Êð
+ç›¸å…³é“¾æŽ¥ï¼š  
+Python 3.10.10ä¸‹è½½ï¼š[https://www.python.org/downloads/release/python-31010/](https://www.python.org/downloads/release/python-31010/)  
+Gephè¿·é›¾é€šä¸‹è½½ï¼š[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe)
 
 
+# è‡ªåŠ¨éƒ¨ç½²
 
-Ê×ÏÈÈ·±£ÄãÓÐ¸ß°æ±¾µÄPython£¨ÍÆ¼ö3.10£©£¬ÕâÀï²»¹ý¶à×¸Êö¡£
 
-Ê×ÏÈÏÂÔØ±¾ÏîÄ¿µÄZIPÑ¹Ëõ°ü£¬½âÑ¹¡£
 
-È»ºóµ½ä¯ÀÀÆ÷ÖÐ°²×°²å¼þ[Cookie Editor](https://microsoftedge.microsoft.com/addons/detail/cookie-editor/ajfboaconbpkglpfanbmlfgojgndmhmc)¡£
+é¦–å…ˆç¡®ä¿ä½ æœ‰é«˜ç‰ˆæœ¬çš„Pythonï¼ˆæŽ¨è3.10ï¼‰ï¼Œè¿™é‡Œä¸è¿‡å¤šèµ˜è¿°ã€‚
 
-°²×°Íê³Éºó£¬´ò¿ªÄãµÄVPN£¬À´µ½[Microsoft New Bing](https://bing.com/new)£¬½øÈëºÍNew BingÁÄÌìµÄ½çÃæ¡£È»ºóµã¿ªCookie Editor£¬°´ÏÂÍ¼Æ¬ÖÐµÄ°´Å¥£º
+é¦–å…ˆä¸‹è½½æœ¬é¡¹ç›®çš„ZIPåŽ‹ç¼©åŒ…ï¼Œè§£åŽ‹ã€‚
 
-![image](https://user-images.githubusercontent.com/119436353/235375933-d7e81988-fc6b-423b-841f-98575d310e32.png)
+ç„¶åŽåˆ°æµè§ˆå™¨ä¸­å®‰è£…æ’ä»¶[Cookie Editor](https://microsoftedge.microsoft.com/addons/detail/cookie-editor/ajfboaconbpkglpfanbmlfgojgndmhmc)ã€‚
 
-È»ºó¾Í¿ÉÒÔÁË¡£°´ÍêÖ®ºó£¬´ò¿ªÏîÄ¿ÎÄ¼þ¼Ð£¬´ò¿ª¸ùÄ¿Â¼ÏÂµÄ`cookie.json`£¬°´ÏÂctrl+v°Ñ¸Õ²Å¸´ÖÆµ½µÄ¶«Î÷ð¤Ìù½øÈ¥£¬±£´æÎÄ¼þ£¬È»ºóÍË³ö¡£
-
-### ÔËÐÐRunÎÄ¼þ¼ÐÏÂµÄ`Install Libs.bat`¡£
-
-ÔÚ°ÑInstall LibsÔËÐÐÍê±Ïºó£¬ÔÚÄúµÚ¶þ´ÎÊ¹ÓÃBingAI-ClientÊ±¾Í²»ÓÃÔÙÔËÐÐÒ»´ÎInstall LibsÁË¡£
-
-È»ºó£¬ÔËÐÐRunÎÄ¼þ¼ÐÏÂµÄ`Run.bat`¡£
-
-½ÓÏÂÀ´£¬³ÌÐò»áÑ¯ÎÊÄãÊÇ·ñÔÊÐí±ðµÄÖ÷»úÁ¬½Ó£¨¼´¿ª·Å¸ø±ðµÄÖ÷»úÊ¹ÓÃNew Bing£©£¬Èç¹ûÑ¡Ôñtrue£¬Äã¾Í¿ÉÒÔÊ¹ÓÃÄãµÄ¹«Íøip¡¢ÄÚÍøip¡¢»Ø»·µØÖ·ºÍ´ò¿ª±¾µØÎÄ¼þÀ´·ÃÎÊBingAI-Client¿Í»§¶Ë£»Èç¹ûÑ¡Ôñfalse£¬¾ÍÖ»ÄÜÓÃ»Ø»·µØÖ·ºÍ´ò¿ª±¾µØÎÄ¼þÀ´·ÃÎÊBingAI-Client¿Í»§¶Ë¡£Èç¹ûÄúÑ¡Ôñ´ò¿ª±¾µØÎÄ¼þÒÔÍâµÄ·½·¨Ê¹ÓÃBingAI-Clint¿Í»§¶Ë£¬¾ÍÒªÔÚipºó¼ÓÉÏ/webui¡£
-
-Èç¹û±¨´íÁË£¬¾ÍÔËÐÐRunÎÄ¼þ¼ÐÏÂµÄ`Update Libs.bat`ºó£¬ÔÙÊÔÒ»´Î¡£
-
-Ñ¯ÎÊÍêÊÇ·ñ¿ª·Å¸ø±ðµÄÖ÷»úºó£¬³ÌÐò»¹»áÑ¯ÎÊÄã²¿ÊðÖÁµÄ¶Ë¿Ú¡£¿ÉÒÔ×ÔÐÐÌîÐ´£¬±£Ö¤²»Óë±ðµÄ³ÌÐò³åÍ»¼´¿É¡£Èç¹û²»ÌîÐ´80£¨Ä¬ÈÏ¶Ë¿Ú£©£¬ÔÚÊ¹ÓÃ´ò¿ª±¾µØÎÄ¼þÒÔÍâµÄ·½·¨·ÃÎÊÊ±£¬ÐèÒªÔÚip»òÓòÃûºó¼Ó¶Ë¿ÚºÅ£¨ip/ÓòÃû + :¶Ë¿ÚºÅ£©¡£
-
-µ½ÕâÀï£¬Äã¾Í³É¹¦µØ²¿ÊðÔÚ±¾µØµÄNew Bing¡£½ÓÏÂÀ´£¬´ò¿ªstaticÏÂµÄ"index.html"£¬»òÔÚä¯ÀÀÆ÷ÖÐ·ÃÎÊ`127.0.0.1:¶Ë¿ÚºÅ/webui`¾Í¿ÉÒÔ¿ªÊ¼Ê¹ÓÃ¸Ã¿Í»§¶ËÁË£¡
-
-¼ÇµÃÔÚÊ¹ÓÃ¿Í»§¶ËµÄÈ«¹ý³ÌÖÐ²»Òª¹Ø±ÕÖÕ¶Ë¡£BingServerµÄÁ¬½ÓÊ®·ÖÎÈ¶¨£¬Çë·ÅÐÄ¡£
-
-Èç¹ûÄúÓÐÌØÊâÐèÇó£¬¿ÉÒÔ·ÃÎÊ[BingAI-ClientÔÚÏß°æ](https://xbzstudio.github.io/BingAI-Client/) ¡£µ«ÊÇ¼ÜÔÚÕâ¸öGithub PagesÉÏµÄ¿Í»§¶ËµÄÄ¬ÈÏÉèÖÃ²»ÄÜ±»ÄãËù¸ü¸Ä£¬¶øÇÒ»¹ÊÇÐèÒªÄã×Ô¼ºÔËÐÐ·þÎñ¶Ë³ÌÐò¡£Èç¹ûÄã¼ÈÏëÊ¹ÓÃ×Ô¼ºµÄÄ¬ÈÏÉèÖÃ£¬ÓÖÏëÓÃ±ðµÄ·þÎñÆ÷ÇëÇóNew BingµÄÏìÓ¦£¬¿ÉÒÔ½«BingAI-Client¼ÜÔÚÄãµÄ·þÎñÆ÷ÉÏ£¬Ê¹ÓÃÔÚ±¾µØÄ¬ÈÏÉèÖÃÖÐ½«HOSTÉèÎªÄãÒªÁ¬½Óµ½µÄ·þÎñÆ÷¹«Íøip+¶Ë¿Ú£¬È»ºó´ò¿ª±¾µØindex.htmlÎÄ¼þ£¬¼´¿ÉÒÀÀµÄãµÄ·þÎñÆ÷ÓëNew Bing¶Ô»°£¬²¢ÇÒ²»ÓÃÔÚ±¾µØ¿ªÆôBingServer.py£¨·þÎñÆ÷¿ªÆô¼´¿É£©£¬²¢Ê¹ÓÃ×Ô¼ºµÄÄ¬ÈÏÉèÖÃ¡£Èç¹ûÏëÔÚÍøÕ¾ÉÏÓÃ×Ô¼ºµÄÄ¬ÈÏÉèÖÃÓëNew Bing¶Ô»°£¬¿ÉÒÔÔÚÄãµÄ·þÎñÆ÷ÖÐ×ÔÐÐ½«Ä¬ÈÏÉèÖÃÉèÖÃÎªÄãÏëÒªµÄ£¬È»ºóÊ¹ÓÃÄãµÄ·þÎñÆ÷µÄ`¹«Íøip/ÓòÃû+¶Ë¿Ú/webui`·ÃÎÊÄãµÄ¶¨ÖÆ°æÔÚÏßBingAI-Client£¬Ò²ÊÇ²»ÓÃÔÚ±¾µØ¿ªÆôBingServer.py£¨·þÎñÆ÷¿ªÆô¼´¿É£©¡£
-
-# ÊÖ¶¯²¿Êð
-
-## 1£¬°²×°²¢²¿ÊðBingAI-Client
-
-Ê×ÏÈÈ·±£ÄãÓÐ¸ß°æ±¾µÄPython£¨ÍÆ¼ö3.10£©£¬ÕâÀï²»¹ý¶à×¸Êö¡£
-
-Ê×ÏÈÏÂÔØ±¾ÏîÄ¿µÄZIPÑ¹Ëõ°ü£¬½âÑ¹¡£
-
-È»ºóµ½ä¯ÀÀÆ÷ÖÐ°²×°²å¼þ[Cookie Editor](https://microsoftedge.microsoft.com/addons/detail/cookie-editor/ajfboaconbpkglpfanbmlfgojgndmhmc)¡£
-
-°²×°Íê³Éºó£¬´ò¿ªÄãµÄVPN£¬À´µ½[Microsoft New Bing](https://bing.com/new)£¬½øÈëºÍNew BingÁÄÌìµÄ½çÃæ¡£È»ºóµã¿ªCookie Editor£¬°´ÏÂÍ¼Æ¬ÖÐµÄ°´Å¥£º
+å®‰è£…å®ŒæˆåŽï¼Œæ‰“å¼€ä½ çš„VPNï¼Œæ¥åˆ°[Microsoft New Bing](https://bing.com/new)ï¼Œè¿›å…¥å’ŒNew BingèŠå¤©çš„ç•Œé¢ã€‚ç„¶åŽç‚¹å¼€Cookie Editorï¼ŒæŒ‰ä¸‹å›¾ç‰‡ä¸­çš„æŒ‰é’®ï¼š
 
 ![image](https://user-images.githubusercontent.com/119436353/235375933-d7e81988-fc6b-423b-841f-98575d310e32.png)
 
-È»ºó¾Í¿ÉÒÔÁË¡£°´ÍêÖ®ºó£¬´ò¿ªÏîÄ¿ÎÄ¼þ¼Ð£¬´ò¿ª¸ùÄ¿Â¼ÏÂµÄ`cookie.json`£¬°´ÏÂctrl+v°Ñ¸Õ²Å¸´ÖÆµ½µÄ¶«Î÷ð¤Ìù½øÈ¥£¬±£´æÎÄ¼þ£¬È»ºóÍË³ö¡£
+ç„¶åŽå°±å¯ä»¥äº†ã€‚æŒ‰å®Œä¹‹åŽï¼Œæ‰“å¼€é¡¹ç›®æ–‡ä»¶å¤¹ï¼Œæ‰“å¼€configæ–‡ä»¶å¤¹ä¸‹çš„`cookie.json`ï¼ŒæŒ‰ä¸‹ctrl+væŠŠåˆšæ‰å¤åˆ¶åˆ°çš„ä¸œè¥¿é»è´´è¿›åŽ»ï¼Œä¿å­˜æ–‡ä»¶ï¼Œç„¶åŽé€€å‡ºã€‚
 
-ÓÃÎÄ¼þ×ÊÔ´¹ÜÀíÆ÷´ò¿ªÏîÄ¿ÎÄ¼þ¼Ð£¬È»ºóÓÒ¼üÎÄ¼þ×ÊÔ´¹ÜÀíÆ÷¿Õ°×µÄµØ·½£¬µã»÷¡°ÔÚÖÕ¶ËÀï´ò¿ª¡±£¬È»ºóÔÚPower ShellÀïÊäÈëÒÔÏÂÃüÁî²¢»Ø³µ£º
+### è¿è¡ŒRunæ–‡ä»¶å¤¹ä¸‹çš„`Install Libs.bat`ã€‚
+
+åœ¨æŠŠInstall Libsè¿è¡Œå®Œæ¯•åŽï¼Œåœ¨æ‚¨ç¬¬äºŒæ¬¡ä½¿ç”¨BingAI-Clientæ—¶å°±ä¸ç”¨å†è¿è¡Œä¸€æ¬¡Install Libsäº†ã€‚
+
+ç„¶åŽï¼Œè¿è¡ŒRunæ–‡ä»¶å¤¹ä¸‹çš„`Run.bat`ã€‚
+
+å¦‚æžœæŠ¥é”™äº†ï¼Œå°±è¿è¡ŒRunæ–‡ä»¶å¤¹ä¸‹çš„`Update Libs.bat`åŽï¼Œå†è¯•ä¸€æ¬¡ã€‚
+
+åˆ°è¿™é‡Œï¼Œä½ å°±æˆåŠŸåœ°éƒ¨ç½²åœ¨æœ¬åœ°çš„New Bingã€‚æŽ¥ä¸‹æ¥ï¼Œæ‰“å¼€staticä¸‹çš„"index.html"ï¼Œæˆ–åœ¨æµè§ˆå™¨ä¸­è®¿é—®`127.0.0.1:ç«¯å£å·/webui`å°±å¯ä»¥å¼€å§‹ä½¿ç”¨è¯¥å®¢æˆ·ç«¯äº†ï¼
+
+è®°å¾—åœ¨ä½¿ç”¨å®¢æˆ·ç«¯çš„å…¨è¿‡ç¨‹ä¸­ä¸è¦å…³é—­ç»ˆç«¯ã€‚BingServerçš„è¿žæŽ¥ååˆ†ç¨³å®šï¼Œè¯·æ”¾å¿ƒã€‚
+
+å¦‚æžœæ‚¨æœ‰ç‰¹æ®Šéœ€æ±‚ï¼Œå¯ä»¥è®¿é—®[BingAI-Clientåœ¨çº¿ç‰ˆ](https://xbzstudio.github.io/BingAI-Client/) ã€‚ä½†æ˜¯æž¶åœ¨è¿™ä¸ªGithub Pagesä¸Šçš„å®¢æˆ·ç«¯çš„é»˜è®¤è®¾ç½®ä¸èƒ½è¢«ä½ æ‰€æ›´æ”¹ï¼Œè€Œä¸”è¿˜æ˜¯éœ€è¦ä½ è‡ªå·±è¿è¡ŒæœåŠ¡ç«¯ç¨‹åºã€‚å¦‚æžœä½ æ—¢æƒ³ä½¿ç”¨è‡ªå·±çš„é»˜è®¤è®¾ç½®ï¼Œåˆæƒ³ç”¨åˆ«çš„æœåŠ¡å™¨è¯·æ±‚New Bingçš„å“åº”ï¼Œå¯ä»¥å°†BingAI-Clientæž¶åœ¨ä½ çš„æœåŠ¡å™¨ä¸Šï¼Œä½¿ç”¨åœ¨æœ¬åœ°é»˜è®¤è®¾ç½®ä¸­å°†HOSTè®¾ä¸ºä½ è¦è¿žæŽ¥åˆ°çš„æœåŠ¡å™¨å…¬ç½‘ip+ç«¯å£ï¼Œç„¶åŽæ‰“å¼€æœ¬åœ°index.htmlæ–‡ä»¶ï¼Œå³å¯ä¾èµ–ä½ çš„æœåŠ¡å™¨ä¸ŽNew Bingå¯¹è¯ï¼Œå¹¶ä¸”ä¸ç”¨åœ¨æœ¬åœ°å¼€å¯BingServer.pyï¼ˆæœåŠ¡å™¨å¼€å¯å³å¯ï¼‰ï¼Œå¹¶ä½¿ç”¨è‡ªå·±çš„é»˜è®¤è®¾ç½®ã€‚å¦‚æžœæƒ³åœ¨ç½‘ç«™ä¸Šç”¨è‡ªå·±çš„é»˜è®¤è®¾ç½®ä¸ŽNew Bingå¯¹è¯ï¼Œå¯ä»¥åœ¨ä½ çš„æœåŠ¡å™¨ä¸­è‡ªè¡Œå°†é»˜è®¤è®¾ç½®è®¾ç½®ä¸ºä½ æƒ³è¦çš„ï¼Œç„¶åŽä½¿ç”¨ä½ çš„æœåŠ¡å™¨çš„`å…¬ç½‘ip/åŸŸå+ç«¯å£/webui`è®¿é—®ä½ çš„å®šåˆ¶ç‰ˆåœ¨çº¿BingAI-Clientï¼Œä¹Ÿæ˜¯ä¸ç”¨åœ¨æœ¬åœ°å¼€å¯BingServer.pyï¼ˆæœåŠ¡å™¨å¼€å¯å³å¯ï¼‰ã€‚
+
+# æ‰‹åŠ¨éƒ¨ç½²
+
+## 1ï¼Œå®‰è£…å¹¶éƒ¨ç½²BingAI-Client
+
+é¦–å…ˆç¡®ä¿ä½ æœ‰é«˜ç‰ˆæœ¬çš„Pythonï¼ˆæŽ¨è3.10ï¼‰ï¼Œè¿™é‡Œä¸è¿‡å¤šèµ˜è¿°ã€‚
+
+é¦–å…ˆä¸‹è½½æœ¬é¡¹ç›®çš„ZIPåŽ‹ç¼©åŒ…ï¼Œè§£åŽ‹ã€‚
+
+ç„¶åŽåˆ°æµè§ˆå™¨ä¸­å®‰è£…æ’ä»¶[Cookie Editor](https://microsoftedge.microsoft.com/addons/detail/cookie-editor/ajfboaconbpkglpfanbmlfgojgndmhmc)ã€‚
+
+å®‰è£…å®ŒæˆåŽï¼Œæ‰“å¼€ä½ çš„VPNï¼Œæ¥åˆ°[Microsoft New Bing](https://bing.com/new)ï¼Œè¿›å…¥å’ŒNew BingèŠå¤©çš„ç•Œé¢ã€‚ç„¶åŽç‚¹å¼€Cookie Editorï¼ŒæŒ‰ä¸‹å›¾ç‰‡ä¸­çš„æŒ‰é’®ï¼š
+
+![image](https://user-images.githubusercontent.com/119436353/235375933-d7e81988-fc6b-423b-841f-98575d310e32.png)
+
+ç„¶åŽå°±å¯ä»¥äº†ã€‚æŒ‰å®Œä¹‹åŽï¼Œæ‰“å¼€é¡¹ç›®æ–‡ä»¶å¤¹ï¼Œæ‰“å¼€configæ–‡ä»¶å¤¹ä¸‹çš„`cookie.json`ï¼ŒæŒ‰ä¸‹ctrl+væŠŠåˆšæ‰å¤åˆ¶åˆ°çš„ä¸œè¥¿é»è´´è¿›åŽ»ï¼Œä¿å­˜æ–‡ä»¶ï¼Œç„¶åŽé€€å‡ºã€‚
+
+ç”¨æ–‡ä»¶èµ„æºç®¡ç†å™¨æ‰“å¼€é¡¹ç›®æ–‡ä»¶å¤¹ï¼Œç„¶åŽå³é”®æ–‡ä»¶èµ„æºç®¡ç†å™¨ç©ºç™½çš„åœ°æ–¹ï¼Œç‚¹å‡»â€œåœ¨ç»ˆç«¯é‡Œæ‰“å¼€â€ï¼Œç„¶åŽåœ¨Power Shellé‡Œè¾“å…¥ä»¥ä¸‹å‘½ä»¤å¹¶å›žè½¦ï¼š
 ```
 pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
 
-Èç¹ûÃ»ÓÐ¡°ÔÚÖÕ¶ËÀï´ò¿ª¡±£¬Çë°´ÏÂ`win + r`×éºÏ¼ü£¬µ¯³öÔËÐÐ´°¿Ú£¬ÔÚÎÄ±¾¿òÖÐÊäÈëcmd²¢»Ø³µ¡£¾Í»áµ¯³öÖÕ¶Ë¡£È»ºóÔÚÖÕ¶ËÖÐÊäÈëÒÔÏÂÃüÁî²¢»Ø³µ£º
+å¦‚æžœæ²¡æœ‰â€œåœ¨ç»ˆç«¯é‡Œæ‰“å¼€â€ï¼Œè¯·æŒ‰ä¸‹`win + r`ç»„åˆé”®ï¼Œå¼¹å‡ºè¿è¡Œçª—å£ï¼Œåœ¨æ–‡æœ¬æ¡†ä¸­è¾“å…¥cmdå¹¶å›žè½¦ã€‚å°±ä¼šå¼¹å‡ºç»ˆç«¯ã€‚ç„¶åŽåœ¨ç»ˆç«¯ä¸­è¾“å…¥ä»¥ä¸‹å‘½ä»¤å¹¶å›žè½¦ï¼š
 
 ```
-cd /d ÄãµÄÏîÄ¿ÎÄ¼þ¼ÐµÄ¾ø¶ÔÂ·¾¶£¨ÈçC:\Users\33664\OneDrive\XBZ-BingClient£©
+cd /d ä½ çš„é¡¹ç›®æ–‡ä»¶å¤¹çš„ç»å¯¹è·¯å¾„ï¼ˆå¦‚C:\Users\33664\OneDrive\XBZ-BingClientï¼‰
 pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
 
-¹ý³Ì¿ÉÄÜ»áÓÐµã³¤¡£µÚÈý·½°üÈ«²¿°²×°Íê±Ïºó£¬ÔÚÏîÄ¿ÎÄ¼þ¸ùÄ¿Â¼ÖÐ´ò¿ªÖÕ¶Ë£¬È»ºóÊäÈëÃüÁî `python ./BingServer.py` £¬Èç¹ûÃ»ÓÐ±¨´í£¬ÄÇ¾ÍËµÃ÷³É¹¦ÁË¡£
+è¿‡ç¨‹å¯èƒ½ä¼šæœ‰ç‚¹é•¿ã€‚ç¬¬ä¸‰æ–¹åŒ…å…¨éƒ¨å®‰è£…å®Œæ¯•åŽï¼Œåœ¨é¡¹ç›®æ–‡ä»¶æ ¹ç›®å½•ä¸­æ‰“å¼€ç»ˆç«¯ï¼Œç„¶åŽè¾“å…¥å‘½ä»¤ `python ./BingServer.py` ï¼Œå¦‚æžœæ²¡æœ‰æŠ¥é”™ï¼Œé‚£å°±è¯´æ˜ŽæˆåŠŸäº†ã€‚
 
-Èç¹û±¨´í£¬Çë½«EdgeGPTµ÷ÕûÖÁ0.4.4°æ±¾£¨ÐÂ°æ±¾Ê®·Ö²»ÎÈ¶¨£©¡£
+å¦‚æžœæŠ¥é”™ï¼Œè¯·å°†EdgeGPTè°ƒæ•´è‡³0.6.10ç‰ˆæœ¬ã€‚
 
 ```
-pip install EdgeGPT==0.4.4
+pip install EdgeGPT==0.6.10
 ```
 
-½ÓÏÂÀ´£¬³ÌÐò»áÑ¯ÎÊÄãÊÇ·ñÔÊÐí±ðµÄÖ÷»úÁ¬½Ó£¨¼´¿ª·Å¸ø±ðµÄÖ÷»úÊ¹ÓÃNew Bing£©£¬Èç¹ûÑ¡Ôñtrue£¬Äã¾Í¿ÉÒÔÊ¹ÓÃÄãµÄ¹«Íøip¡¢ÄÚÍøip¡¢»Ø»·µØÖ·ºÍ´ò¿ª±¾µØÎÄ¼þÀ´·ÃÎÊBingAI-Client¿Í»§¶Ë£»Èç¹ûÑ¡Ôñfalse£¬¾ÍÖ»ÄÜÓÃ»Ø»·µØÖ·ºÍ´ò¿ª±¾µØÎÄ¼þÀ´·ÃÎÊBingAI-Client¿Í»§¶Ë¡£Èç¹ûÄúÑ¡Ôñ´ò¿ª±¾µØÎÄ¼þÒÔÍâµÄ·½·¨Ê¹ÓÃBingAI-Clint¿Í»§¶Ë£¬¾ÍÒªÔÚipºó¼ÓÉÏ/webui¡£
+åˆ°è¿™é‡Œï¼Œä½ å°±æˆåŠŸåœ°éƒ¨ç½²åœ¨æœ¬åœ°çš„New Bingã€‚æŽ¥ä¸‹æ¥ï¼Œæ‰“å¼€staticä¸‹çš„"index.html"ï¼Œæˆ–åœ¨æµè§ˆå™¨ä¸­è®¿é—®`127.0.0.1:ç«¯å£å·/webui`å°±å¯ä»¥å¼€å§‹ä½¿ç”¨è¯¥å®¢æˆ·ç«¯äº†ï¼
 
-Ñ¯ÎÊÍêÊÇ·ñ¿ª·Å¸ø±ðµÄÖ÷»úºó£¬³ÌÐò»¹»áÑ¯ÎÊÄã²¿ÊðÖÁµÄ¶Ë¿Ú¡£¿ÉÒÔ×ÔÐÐÌîÐ´£¬±£Ö¤²»Óë±ðµÄ³ÌÐò³åÍ»¼´¿É¡£Èç¹û²»ÌîÐ´80£¨Ä¬ÈÏ¶Ë¿Ú£©£¬ÔÚÊ¹ÓÃ´ò¿ª±¾µØÎÄ¼þÒÔÍâµÄ·½·¨·ÃÎÊÊ±£¬ÐèÒªÔÚip»òÓòÃûºó¼Ó¶Ë¿ÚºÅ£¨ip/ÓòÃû + :¶Ë¿ÚºÅ£©¡£
+è®°å¾—åœ¨ä½¿ç”¨å®¢æˆ·ç«¯çš„å…¨è¿‡ç¨‹ä¸­ä¸è¦å…³é—­ç»ˆç«¯ã€‚BingServerçš„è¿žæŽ¥ååˆ†ç¨³å®šï¼Œè¯·æ”¾å¿ƒã€‚
 
-µ½ÕâÀï£¬Äã¾Í³É¹¦µØ²¿ÊðÔÚ±¾µØµÄNew Bing¡£½ÓÏÂÀ´£¬´ò¿ªstaticÏÂµÄ"index.html"£¬»òÔÚä¯ÀÀÆ÷ÖÐ·ÃÎÊ`127.0.0.1:¶Ë¿ÚºÅ/webui`¾Í¿ÉÒÔ¿ªÊ¼Ê¹ÓÃ¸Ã¿Í»§¶ËÁË£¡
-
-¼ÇµÃÔÚÊ¹ÓÃ¿Í»§¶ËµÄÈ«¹ý³ÌÖÐ²»Òª¹Ø±ÕÖÕ¶Ë¡£BingServerµÄÁ¬½ÓÊ®·ÖÎÈ¶¨£¬Çë·ÅÐÄ¡£
-
-Èç¹ûÄúÓÐÌØÊâÐèÇó£¬¿ÉÒÔ·ÃÎÊ[BingAI-ClientÔÚÏß°æ](https://xbzstudio.github.io/BingAI-Client/) ¡£µ«ÊÇ¼ÜÔÚÕâ¸öGithub PagesÉÏµÄ¿Í»§¶ËµÄÄ¬ÈÏÉèÖÃ²»ÄÜ±»ÄãËù¸ü¸Ä£¬¶øÇÒ»¹ÊÇÐèÒªÄã×Ô¼ºÔËÐÐ·þÎñ¶Ë³ÌÐò¡£Èç¹ûÄã¼ÈÏëÊ¹ÓÃ×Ô¼ºµÄÄ¬ÈÏÉèÖÃ£¬ÓÖÏëÓÃ±ðµÄ·þÎñÆ÷ÇëÇóNew BingµÄÏìÓ¦£¬¿ÉÒÔ½«BingAI-Client¼ÜÔÚÄãµÄ·þÎñÆ÷ÉÏ£¬Ê¹ÓÃÔÚ±¾µØÄ¬ÈÏÉèÖÃÖÐ½«HOSTÉèÎªÄãÒªÁ¬½Óµ½µÄ·þÎñÆ÷¹«Íøip+¶Ë¿Ú£¬È»ºó´ò¿ª±¾µØindex.htmlÎÄ¼þ£¬¼´¿ÉÒÀÀµÄãµÄ·þÎñÆ÷ÓëNew Bing¶Ô»°£¬²¢ÇÒ²»ÓÃÔÚ±¾µØ¿ªÆôBingServer.py£¨·þÎñÆ÷¿ªÆô¼´¿É£©£¬²¢Ê¹ÓÃ×Ô¼ºµÄÄ¬ÈÏÉèÖÃ¡£Èç¹ûÏëÔÚÍøÕ¾ÉÏÓÃ×Ô¼ºµÄÄ¬ÈÏÉèÖÃÓëNew Bing¶Ô»°£¬¿ÉÒÔÔÚÄãµÄ·þÎñÆ÷ÖÐ×ÔÐÐ½«Ä¬ÈÏÉèÖÃÉèÖÃÎªÄãÏëÒªµÄ£¬È»ºóÊ¹ÓÃÄãµÄ·þÎñÆ÷µÄ`¹«Íøip/ÓòÃû+¶Ë¿Ú/webui`·ÃÎÊÄãµÄ¶¨ÖÆ°æÔÚÏßBingAI-Client£¬Ò²ÊÇ²»ÓÃÔÚ±¾µØ¿ªÆôBingServer.py£¨·þÎñÆ÷¿ªÆô¼´¿É£©¡£
+å¦‚æžœæ‚¨æœ‰ç‰¹æ®Šéœ€æ±‚ï¼Œå¯ä»¥è®¿é—®[BingAI-Clientåœ¨çº¿ç‰ˆ](https://xbzstudio.github.io/BingAI-Client/) ã€‚ä½†æ˜¯æž¶åœ¨è¿™ä¸ªGithub Pagesä¸Šçš„å®¢æˆ·ç«¯çš„é»˜è®¤è®¾ç½®ä¸èƒ½è¢«ä½ æ‰€æ›´æ”¹ï¼Œè€Œä¸”è¿˜æ˜¯éœ€è¦ä½ è‡ªå·±è¿è¡ŒæœåŠ¡ç«¯ç¨‹åºã€‚å¦‚æžœä½ æ—¢æƒ³ä½¿ç”¨è‡ªå·±çš„é»˜è®¤è®¾ç½®ï¼Œåˆæƒ³ç”¨åˆ«çš„æœåŠ¡å™¨è¯·æ±‚New Bingçš„å“åº”ï¼Œå¯ä»¥å°†BingAI-Clientæž¶åœ¨ä½ çš„æœåŠ¡å™¨ä¸Šï¼Œä½¿ç”¨åœ¨æœ¬åœ°é»˜è®¤è®¾ç½®ä¸­å°†HOSTè®¾ä¸ºä½ è¦è¿žæŽ¥åˆ°çš„æœåŠ¡å™¨å…¬ç½‘ip+ç«¯å£ï¼Œç„¶åŽæ‰“å¼€æœ¬åœ°index.htmlæ–‡ä»¶ï¼Œå³å¯ä¾èµ–ä½ çš„æœåŠ¡å™¨ä¸ŽNew Bingå¯¹è¯ï¼Œå¹¶ä¸”ä¸ç”¨åœ¨æœ¬åœ°å¼€å¯BingServer.pyï¼ˆæœåŠ¡å™¨å¼€å¯å³å¯ï¼‰ï¼Œå¹¶ä½¿ç”¨è‡ªå·±çš„é»˜è®¤è®¾ç½®ã€‚å¦‚æžœæƒ³åœ¨ç½‘ç«™ä¸Šç”¨è‡ªå·±çš„é»˜è®¤è®¾ç½®ä¸ŽNew Bingå¯¹è¯ï¼Œå¯ä»¥åœ¨ä½ çš„æœåŠ¡å™¨ä¸­è‡ªè¡Œå°†é»˜è®¤è®¾ç½®è®¾ç½®ä¸ºä½ æƒ³è¦çš„ï¼Œç„¶åŽä½¿ç”¨ä½ çš„æœåŠ¡å™¨çš„`å…¬ç½‘ip/åŸŸå+ç«¯å£/webui`è®¿é—®ä½ çš„å®šåˆ¶ç‰ˆåœ¨çº¿BingAI-Clientï¼Œä¹Ÿæ˜¯ä¸ç”¨åœ¨æœ¬åœ°å¼€å¯BingServer.pyï¼ˆæœåŠ¡å™¨å¼€å¯å³å¯ï¼‰ã€‚
 
 </details>
 
-# ÅäÖÃNew Bing
+# é…ç½®New Bing
 
-## Ä¬ÈÏÁÄÌìÉèÖÃ¸ü¸Ä
+## é»˜è®¤èŠå¤©è®¾ç½®æ›´æ”¹
 
-½øÈë./static/src/jsÎÄ¼þ¼Ðºó£¬¾Í¿ÉÒÔ¿´µ½Ò»¸öÃûÎª¡°setting.js¡±µÄÎÄ¼þ¡£´ò¿ªÕâ¸öÎÄ¼þ£¬ÀïÃæ´¢´æ×ÅÒ»¶Î´úÂë£¬Ä¬ÈÏÊÇÕâÑù£º
+è¿›å…¥./static/src/jsæ–‡ä»¶å¤¹åŽï¼Œå°±å¯ä»¥çœ‹åˆ°ä¸€ä¸ªåä¸ºâ€œsetting.jsâ€çš„æ–‡ä»¶ã€‚æ‰“å¼€è¿™ä¸ªæ–‡ä»¶ï¼Œé‡Œé¢å‚¨å­˜ç€ä¸€æ®µä»£ç ï¼Œé»˜è®¤æ˜¯è¿™æ ·ï¼š
 
 ```javascript
 var setting = {
 
-    HOST:'127.0.0.1', //ÄãÒªÁ¬½Óµ½µÄ·þÎñÆ÷IP»òÓòÃû£¬Èç¹ûBingAI·þÎñÆ÷¶Ë¿Ú²»Îª80£¬ÇëÔÚºóÃæ¼ÓÉÏ":¶Ë¿ÚÖµ"¡£Ä¬ÈÏÎª127.0.0.1£¬¼´Îª·ÃÎÊ±¾µØ·þÎñÆ÷¡£
-    autoTranslate:true, //ÊÇ·ñÄ¬ÈÏÆôÓÃ×Ô¶¯·­Òë£¬trueÎªÊÇ£¬falseÎª·ñ
-    tokenToServer:true, //ÊÇ·ñÄ¬ÈÏÆôÓÃÁ¬Ðø¶Ô»°£¬trueÎªÊÇ£¬falseÎª·ñ
-    autoScroll:true, //ÊÇ·ñÔÚBing»Ø¸´ËÍ´ïºó×Ô¶¯¹ö¶¯ÖÁÒ³Ãæµ×²¿£¬trueÎªÊÇ£¬falseÎª·ñ
-    chatMoreTimes:true, //ÊÇ·ñ×Ô¶¯Í»ÆÆ20Ìõ¶Ô»°ÏÞÖÆ£¬trueÎªÊÇ£¬falseÎª·ñ
-    HTTPSMODE:false, //ÊÇ·ñ¿ªÆôHTTPSÄ£Ê½£¬trueÎªÊÇ£¬falseÎª·ñ¡£Èç¹û¿ªÆô£¬½«»á°ÑÐ­Òé¸ü¸ÄÎªhttpsºÍwss¡£
-    chatStyle:"creative", //ÓëBing AIÁÄÌìÊ±Ñ¡ÓÃµÄÁÄÌì·ç¸ñ£¬balanced´ú±íÆ½ºâ£¬creative´ú±í´´ÔìÁ¦£¬precise´ú±í¾«È·ÐÔ
-    tips:"", //ÔÚÐÂµÄÖ÷Ìâ¿ªÊ¼Ê±µÄµÚÒ»Ìõ¶Ô»°Ç°²åÈëµÄÌáÊ¾£¬nullºÍ¿ÕµÄÓ¢ÎÄË«ÒýºÅ£¨""£©±íÊ¾Ã»ÓÐ¡£
-    fontColor:"white", //ÄãºÍBing AIÔÚÏûÏ¢¿òÖÐµÄÏûÏ¢×ÖÌåÑÕÉ«
-    nameColor:"#dadada", //ÄãºÍBing AIÏÔÊ¾Ãû×ÖµÄÑÕÉ«
-    backgroundUrl:"./src/images/Background.jpg", //±³¾°Í¼Æ¬µÄurlµØÖ·£¬Ä¬ÈÏÎªÏîÄ¿ÎÄ¼þÖÐµÄBackground.jpg
-    saveChatTimes:20 //×î´ó±£´æÁÄÌì¼ÇÂ¼ÊýÁ¿
+    HOST:'127.0.0.1', //ä½ è¦è¿žæŽ¥åˆ°çš„æœåŠ¡å™¨IPæˆ–åŸŸåï¼Œå¦‚æžœBingAIæœåŠ¡å™¨ç«¯å£ä¸ä¸º80ï¼Œè¯·åœ¨åŽé¢åŠ ä¸Š":ç«¯å£å€¼"ã€‚é»˜è®¤ä¸º127.0.0.1ï¼Œå³ä¸ºè®¿é—®æœ¬åœ°æœåŠ¡å™¨ã€‚
+    autoTranslate:true, //æ˜¯å¦é»˜è®¤å¯ç”¨è‡ªåŠ¨ç¿»è¯‘ï¼Œtrueä¸ºæ˜¯ï¼Œfalseä¸ºå¦
+    tokenToServer:true, //æ˜¯å¦é»˜è®¤å¯ç”¨è¿žç»­å¯¹è¯ï¼Œtrueä¸ºæ˜¯ï¼Œfalseä¸ºå¦
+    autoScroll:true, //æ˜¯å¦åœ¨Bingå›žå¤é€è¾¾åŽè‡ªåŠ¨æ»šåŠ¨è‡³é¡µé¢åº•éƒ¨ï¼Œtrueä¸ºæ˜¯ï¼Œfalseä¸ºå¦
+    chatMoreTimes:true, //æ˜¯å¦è‡ªåŠ¨çªç ´20æ¡å¯¹è¯é™åˆ¶ï¼Œtrueä¸ºæ˜¯ï¼Œfalseä¸ºå¦
+    HTTPSMODE:false, //æ˜¯å¦å¼€å¯HTTPSæ¨¡å¼ï¼Œtrueä¸ºæ˜¯ï¼Œfalseä¸ºå¦ã€‚å¦‚æžœå¼€å¯ï¼Œå°†ä¼šæŠŠåè®®æ›´æ”¹ä¸ºhttpså’Œwssã€‚
+    chatStyle:"creative", //ä¸ŽBing AIèŠå¤©æ—¶é€‰ç”¨çš„èŠå¤©é£Žæ ¼ï¼Œbalancedä»£è¡¨å¹³è¡¡ï¼Œcreativeä»£è¡¨åˆ›é€ åŠ›ï¼Œpreciseä»£è¡¨ç²¾ç¡®æ€§
+    tips:"", //åœ¨æ–°çš„ä¸»é¢˜å¼€å§‹æ—¶çš„ç¬¬ä¸€æ¡å¯¹è¯å‰æ’å…¥çš„æç¤ºï¼Œnullå’Œç©ºçš„è‹±æ–‡åŒå¼•å·ï¼ˆ""ï¼‰è¡¨ç¤ºæ²¡æœ‰ã€‚
+    fontColor:"white", //ä½ å’ŒBing AIåœ¨æ¶ˆæ¯æ¡†ä¸­çš„æ¶ˆæ¯å­—ä½“é¢œè‰²
+    nameColor:"#dadada", //ä½ å’ŒBing AIæ˜¾ç¤ºåå­—çš„é¢œè‰²
+    backgroundUrl:"./src/images/Background.jpg", //èƒŒæ™¯å›¾ç‰‡çš„urlåœ°å€ï¼Œé»˜è®¤ä¸ºé¡¹ç›®æ–‡ä»¶ä¸­çš„Background.jpg
+    saveChatTimes:20 //æœ€å¤§ä¿å­˜èŠå¤©è®°å½•æ•°é‡
     
 };
 ```
 
-½ÓÏÂÀ´ÄãÖ»Òª¸ù¾ÝÕâ¶Î´úÂëµÄÖÐÎÄ×¢ÊÍÀ´¸ü¸ÄÅäÖÃ¼´¿É¸ü¸ÄÄãµÄÄ¬ÈÏÉèÖÃ¡£
-ÔÚ¸ü¸ÄÄãµÄÄ¬ÈÏÉèÖÃºó£¬´ò¿ª±¾µØ¿Í»§¶ËÊ±£¬ÄãµÄÁÄÌìÉèÖÃ»á¸ü¸ÄÎªÄ¬ÈÏÉèÖÃÖÐµÄÄÇÑù¡£ÀýÈçÄãÔÚÄ¬ÈÏÉèÖÃÖÐ±íÊ¾ÄãÏëÒªÈÃchatStyle¸ü¸ÄÎª"balanced"£¬ÄÇÃ´ÔÚ´ò¿ª±¾µØ¿Í»§¶ËÊ±£¬ÁÄÌìÉèÖÃÖÐµÄÁÄÌì·ç¸ñÉèÖÃ½«»á×Ô¶¯¸ü¸ÄÎªbalanced¡£
+æŽ¥ä¸‹æ¥ä½ åªè¦æ ¹æ®è¿™æ®µä»£ç çš„ä¸­æ–‡æ³¨é‡Šæ¥æ›´æ”¹é…ç½®å³å¯æ›´æ”¹ä½ çš„é»˜è®¤è®¾ç½®ã€‚
+åœ¨æ›´æ”¹ä½ çš„é»˜è®¤è®¾ç½®åŽï¼Œæ‰“å¼€æœ¬åœ°å®¢æˆ·ç«¯æ—¶ï¼Œä½ çš„èŠå¤©è®¾ç½®ä¼šæ›´æ”¹ä¸ºé»˜è®¤è®¾ç½®ä¸­çš„é‚£æ ·ã€‚ä¾‹å¦‚ä½ åœ¨é»˜è®¤è®¾ç½®ä¸­è¡¨ç¤ºä½ æƒ³è¦è®©chatStyleæ›´æ”¹ä¸º"balanced"ï¼Œé‚£ä¹ˆåœ¨æ‰“å¼€æœ¬åœ°å®¢æˆ·ç«¯æ—¶ï¼ŒèŠå¤©è®¾ç½®ä¸­çš„èŠå¤©é£Žæ ¼è®¾ç½®å°†ä¼šè‡ªåŠ¨æ›´æ”¹ä¸ºbalancedã€‚
 
 
-# ÆäËû
+# å…¶ä»–
 
-### Í·Ïñ¸ü¸Ä
+### å¤´åƒæ›´æ”¹
 
-½øÈë./static/src/imagesÎÄ¼þ¼Ð£¬ÀïÃæÓÐÁ½ÕÅÍ¼Æ¬£¬Ò»¸öÊÇ`User.png`£¬Ò»¸öÊÇ`Bing.png`£¬Èç¹ûÄãÏëÒª¸ü»»Äã×Ô¼º»òNew BingµÄÍ·ÏñµÄ»°£¬¾ÍÔÚÕâ¸öÎÄ¼þ¼ÐÖÐ¼ÓÈëÄãÏëÒª¸ü»»µÄÍ¼Æ¬£¬²¢°ÑËüÖØÃüÃûÎª"User.png"»ò"Bing.png"¡£
+è¿›å…¥./static/src/imagesæ–‡ä»¶å¤¹ï¼Œé‡Œé¢æœ‰ä¸¤å¼ å›¾ç‰‡ï¼Œä¸€ä¸ªæ˜¯`User.png`ï¼Œä¸€ä¸ªæ˜¯`Bing.png`ï¼Œå¦‚æžœä½ æƒ³è¦æ›´æ¢ä½ è‡ªå·±æˆ–New Bingçš„å¤´åƒçš„è¯ï¼Œå°±åœ¨è¿™ä¸ªæ–‡ä»¶å¤¹ä¸­åŠ å…¥ä½ æƒ³è¦æ›´æ¢çš„å›¾ç‰‡ï¼Œå¹¶æŠŠå®ƒé‡å‘½åä¸º"User.png"æˆ–"Bing.png"ã€‚
 
-## Ò»Ð©ÒÉÄÑ½â´ð£º
+## ä¸€äº›ç–‘éš¾è§£ç­”ï¼š
 
-Ê×ÏÈ£¬ÔÚ³öÏÖ´íÎóÊ±£¬ÇëµÚÒ»Ê±¼ä·´Ó¦£º
-
-```
-
-µã»÷¡°ÐÂÖ÷Ìâ¡±°´Å¥¡£
-
-Èç¹û²»ÐÐ£¬¾ÍÉý¼¶¿â¡£ÔËÐÐRunÎÄ¼þ¼ÐÏÂµÄ`Update Libs.bat`ÒÔ¸üÐÂ¿â¡£
-
-ÔÙ²»ÐÐ£¬¾ÍÊÔ×Å¿ªÆôVPN¡£
-
-»¹ÊÇ²»ÐÐ£¬¾Í¸üÐÂÒ»´Î×Ô¼ºµÄCookie¡£
-
-ÈôÒÔÉÏËùÓÐ·½·¨¶¼ÎÞÐ§£¬Çë²é¿´ÒÔÏÂµÄÒÉÄÑ½â´ð¡£»¹ÊÇÎÞ·¨½â¾öÎÊÌâ£¬Çë×ÉÑ¯×÷Õß¡£
+é¦–å…ˆï¼Œåœ¨å‡ºçŽ°é”™è¯¯æ—¶ï¼Œè¯·ç¬¬ä¸€æ—¶é—´ååº”ï¼š
 
 ```
 
-### python±¨´í£ºÕÒ²»µ½ÎÄ¼þ
+ç‚¹å‡»â€œæ–°ä¸»é¢˜â€æŒ‰é’®ã€‚
 
-Äã¿ÉÄÜÓÃµÄÊÇ1.5»òÒÔÏÂµÄ°æ±¾¡£¿ÉÒÔÉý¼¶ÖÁ1.6½â¾öÕâ¸öÎÊÌâ¡£
+å¦‚æžœä¸è¡Œï¼Œå°±å‡çº§åº“ã€‚è¿è¡ŒRunæ–‡ä»¶å¤¹ä¸‹çš„`Update Libs.bat`ä»¥æ›´æ–°åº“ã€‚
 
-### python±¨´í£ºÒÔÒ»ÖÖ·ÃÎÊÈ¨ÏÞ²»ÔÊÐíµÄ·½Ê½×öÁË Ò»¸ö·ÃÎÊÌ×½Ó×ÖµÄ³¢ÊÔ¡£
+å†ä¸è¡Œï¼Œå°±è¯•ç€å¼€å¯VPNã€‚
 
-ÔÚÊäÈë¶Ë¿ÚµÄÊ±ºò£¬²»ÒªÊäÔ­À´µÄ¶Ë¿Ú£¨ÀýÈçÄãÊäÈë80£¬±¨ÁËÕâ¸ö´í£¬¾Í°Ñ¶Ë¿Ú»»³É70»òÕß90£¬¶¼ÐÐ£©¡£È»ºó´ò¿ªindex.htmlÖ®ºó£¬ÔÚ
-¡°ÉèÖÃ¡±°´Å¥Àï°ÑÁ¬½Óµ½µÄ·þÎñÆ÷¸Ä³É127.0.0.1:¶Ë¿ÚºÅ¡£¼ÇµÃ²»ÒªÂ©ÁËÓ¢ÎÄÃ°ºÅ¡£ÀýÈçÄã°Ñ¶Ë¿ÚÉèÖÃÎª70£¬¾Í¸Ä³É127.0.0.1:70¡£
+è¿˜æ˜¯ä¸è¡Œï¼Œå°±æ›´æ–°ä¸€æ¬¡è‡ªå·±çš„Cookieã€‚
 
-Èç¹ûÊ¹ÓÃipµØÖ·»òÓòÃû·ÃÎÊ£¬¶¼ÐèÒªÌí¼Ó¡°:¶Ë¿Ú¡±£¬ÀýÈç192.168.56.36:70 ºÍ 127.0.0.1:70¡£
+è‹¥ä»¥ä¸Šæ‰€æœ‰æ–¹æ³•éƒ½æ— æ•ˆï¼Œè¯·æŸ¥çœ‹ä»¥ä¸‹çš„ç–‘éš¾è§£ç­”ã€‚è¿˜æ˜¯æ— æ³•è§£å†³é—®é¢˜ï¼Œè¯·å’¨è¯¢ä½œè€…ã€‚
 
-### °²×°ÒÀÀµÏîÊ±±¨´í£¬pip²»ÊÇÃüÁî»ò¿ÉÖ´ÐÐµÄ...
+```
 
-µ¼ÖÂÕâ¸ö´íÎóµÄÔ­ÒòÊÇÄãÃ»ÓÐ½«Python¼ÓÈë»·¾³±äÁ¿£¬»òÊÇÃ»ÓÐ°²×°Python¡£Ê×ÏÈÈ·±£Äã°²×°ÁËPythonµÄ¸ß°æ±¾¡£Èç¹û°²×°ÁË£¬ÄÇ¾ÍÊÇÃ»¼Ó»·¾³±äÁ¿¡£
+### pythonæŠ¥é”™ï¼šæ‰¾ä¸åˆ°æ–‡ä»¶
 
-×î¼òµ¥µÄ·½·¨ÊÇÏÈ°ÑPythonÐ¶ÔØÁË£¬È»ºóÓÃ°²×°°üÖØÐÂ°²×°¡£ÔÚ°²×°µÄ¹ý³ÌÖÐ£¬×¢ÒâÒª¹´Ñ¡¡°Add Python 3.xx to path¡±µÄÑ¡Ïî£¬·ñÔòÖØ×°ÁËÖ®ºó»¹ÊÇ
-Ã»·¨Ê¹ÓÃpip¡£
+å‡çº§è‡³1.7è§£å†³è¿™ä¸ªé—®é¢˜ã€‚
 
-### Ò»Ö±Loading for New Bing
+### pythonæŠ¥é”™ï¼šä»¥ä¸€ç§è®¿é—®æƒé™ä¸å…è®¸çš„æ–¹å¼åšäº† ä¸€ä¸ªè®¿é—®å¥—æŽ¥å­—çš„å°è¯•ã€‚ï¼ˆæˆ–ä¸€å¼€run.batå°±é—ªé€€ï¼‰
 
-Äã¿ÉÒÔÄÍÐÄµÈ´ý£¨ÒòÎª¿ÉÄÜ»á±È½Ï¾Ã£©¡£Èç¹û»¹ÊÇ²»³öÏÖ£¬ÓÐ¿ÉÄÜÊÇÄãµÄ¶Ë¿ÚÌîÐ´´íÎó¡£Èç¹ûÄãÔÚBingServer.pyÆô¶¯Ê±ÌîÁË·Ç80µÄ¶Ë¿Ú£¬ÇëÔÚÁÄÌìÒ³Ãæ´ò¿ªÉèÖÃ£¬½«Á¬½Óµ½·þÎñÆ÷µÄÉèÖÃ¸ü¸ÄÎª¡°127.0.0.1:¶Ë¿Ú¡±¡£Ò²¿ÉÄÜÊÇÄãÏÂÔØµÄ1.5.1ºÍ1.5°æ±¾ÔÚÉÏ´«µ½GithubÊ±È±ÉÙÁËÐ©Ê²Ã´£¬ÏÖÒÑ·¢²¼1.6°æ±¾¡£
-¿ÉÒÔÖØÐÂÏÂÔØÀ´ÓÃ¡£
+æ‰“å¼€configæ–‡ä»¶å¤¹ä¸­çš„server.jsonï¼ŒæŠŠPortçš„å€¼æ”¹ä¸º80ä»¥å¤–çš„ç«¯å£å·ã€‚å†è¿è¡Œä¸€éç¨‹åºã€‚ç„¶åŽæ‰“å¼€index.htmlä¹‹åŽï¼Œåœ¨
+â€œè®¾ç½®â€æŒ‰é’®é‡ŒæŠŠè¿žæŽ¥åˆ°çš„æœåŠ¡å™¨æ”¹æˆ127.0.0.1:ç«¯å£å·ã€‚è®°å¾—ä¸è¦æ¼äº†è‹±æ–‡å†’å·ã€‚ä¾‹å¦‚ä½ æŠŠç«¯å£è®¾ç½®ä¸º70ï¼Œå°±æ”¹æˆ127.0.0.1:70ã€‚
 
-### Python±¨´í£ºKeyErrorµÈ
+å¦‚æžœä½¿ç”¨ipåœ°å€æˆ–åŸŸåè®¿é—®ï¼Œéƒ½éœ€è¦æ·»åŠ â€œ:ç«¯å£â€ï¼Œä¾‹å¦‚192.168.56.36:70 å’Œ 127.0.0.1:70ã€‚
 
-ÕâÖÖÇé¿öÏÂ¾ÍÊÇBing²»Ïë»Ø¸´ÄãÁË¡£Ò²¾ÍÊÇÇ¿ÖÆ½áÊøÁË¶Ô»°¡£¶à°ëÊÇ¹ØÓÚmessgaeµÄKeyError¡£Èç¹û²»ÊÇ£¬¿ÉÒÔ½øÒ»²½Ñ°Çó°ïÖú¡£
+### å®‰è£…ä¾èµ–é¡¹æ—¶æŠ¥é”™ï¼Œpipä¸æ˜¯å‘½ä»¤æˆ–å¯æ‰§è¡Œçš„...
 
-### Éú³ÉÍ¼ÏñÊ±±¨´í£ºCaused by NewConnectionError
+å¯¼è‡´è¿™ä¸ªé”™è¯¯çš„åŽŸå› æ˜¯ä½ æ²¡æœ‰å°†PythonåŠ å…¥çŽ¯å¢ƒå˜é‡ï¼Œæˆ–æ˜¯æ²¡æœ‰å®‰è£…Pythonã€‚é¦–å…ˆç¡®ä¿ä½ å®‰è£…äº†Pythonçš„é«˜ç‰ˆæœ¬ã€‚å¦‚æžœå®‰è£…äº†ï¼Œé‚£å°±æ˜¯æ²¡åŠ çŽ¯å¢ƒå˜é‡ã€‚
 
-Éú³ÉÍ¼Ïñ¹¦ÄÜÐèÒª¿ªÆôVPNºó²Å¿ÉÒÔÊ¹ÓÃ¡£
+æœ€ç®€å•çš„æ–¹æ³•æ˜¯å…ˆæŠŠPythonå¸è½½äº†ï¼Œç„¶åŽç”¨å®‰è£…åŒ…é‡æ–°å®‰è£…ã€‚åœ¨å®‰è£…çš„è¿‡ç¨‹ä¸­ï¼Œæ³¨æ„è¦å‹¾é€‰â€œAdd Python 3.xx to pathâ€çš„é€‰é¡¹ï¼Œå¦åˆ™é‡è£…äº†ä¹‹åŽè¿˜æ˜¯
+æ²¡æ³•ä½¿ç”¨pipã€‚
 
-# Ê¹ÓÃ·½·¨£º
+### ä¸€ç›´Loading for New Bing
 
-ÔÚÎÄ±¾¿òÖÐÊäÈëÎÊÌâ£¨¿ÉÒÔ»»ÐÐ£©¡£°´ÏÂ¡°·¢ËÍ¡±°´Å¥»ò`Ctrl + Enter`¿ì½Ý¼ü·¢ËÍÐÅÏ¢¸øNew Bing¡£
+ä½ å¯ä»¥è€å¿ƒç­‰å¾…ï¼ˆå› ä¸ºå¯èƒ½ä¼šæ¯”è¾ƒä¹…ï¼‰ã€‚å¦‚æžœè¿˜æ˜¯ä¸å‡ºçŽ°ï¼Œæœ‰å¯èƒ½æ˜¯ä½ çš„ç«¯å£å¡«å†™é”™è¯¯ã€‚å¦‚æžœä½ åœ¨BingServer.pyå¯åŠ¨æ—¶å¡«äº†éž80çš„ç«¯å£ï¼Œè¯·åœ¨èŠå¤©é¡µé¢æ‰“å¼€è®¾ç½®ï¼Œå°†è¿žæŽ¥åˆ°æœåŠ¡å™¨çš„è®¾ç½®æ›´æ”¹ä¸ºâ€œ127.0.0.1:ç«¯å£â€ã€‚ä¹Ÿå¯èƒ½æ˜¯ä½ ä¸‹è½½çš„1.5.1å’Œ1.5ç‰ˆæœ¬åœ¨ä¸Šä¼ åˆ°Githubæ—¶ç¼ºå°‘äº†äº›ä»€ä¹ˆï¼ŒçŽ°å·²å‘å¸ƒ1.7ç‰ˆæœ¬ã€‚
+å¯ä»¥é‡æ–°ä¸‹è½½æ¥ç”¨ã€‚
 
-Èç¹ûÏë¿ªÆôÐÂµÄ»°Ìâ£¬¿ÉÒÔ°´ÏÂ¡±ÐÂÖ÷Ìâ¡°¡£¿ªÆôÐÂÖ÷Ìâºó£¬»á×Ô¶¯ÒªÇóNew BingÀí½âÖ®Ç°µÄÁÄÌì¼ÇÂ¼²¢¼ÌÐøÓëÄãÁÄÌì£¨Ä¿µÄÊÇ´ïµ½ÀàËÆÓÚÎÞÏÞÐøº½µÄÐ§¹û£©¡£Èç¹ûÏëÒª³¹µ×ÖØÐÂ¿ªÊ¼¶Ô»°£¬ÔÚÉèÖÃÀï½«±£´æ¼ÇÒäÑ¡Ïî¹Ø±Õ¡£
+### PythonæŠ¥é”™ï¼šKeyErrorç­‰
 
-°´ÏÂÉèÖÃ°´Å¥£¬ÓÐºÜ¶à¹¦ÄÜ¿ª¹Ø¡£Äã¿ÉÒÔ×Ô¼ºÅäÖÃÄãµÄÑ¡ÏîÉèÖÃ£¬Õâ»áÓ°Ïìµ½ÄãÓëBingµÄµÄÁÄÌì¡£
+è¿™ç§æƒ…å†µä¸‹å°±æ˜¯Bingä¸æƒ³å›žå¤ä½ äº†ã€‚ä¹Ÿå°±æ˜¯å¼ºåˆ¶ç»“æŸäº†å¯¹è¯ã€‚å¤šåŠæ˜¯å…³äºŽmessgaeçš„KeyErrorã€‚å¦‚æžœä¸æ˜¯ï¼Œå¯ä»¥è¿›ä¸€æ­¥å¯»æ±‚å¸®åŠ©ã€‚
 
-ÔÚÎÄ±¾¿òÖÐ£¬ÊäÈë`/create images `£¨½÷¼Ç£¬imagesºó±ß»¹ÓÐ¸ö¿Õ¸ñ£©£¬¿ÉÒÔ¼¤»îÍ¼Æ¬Éú³É¹¦ÄÜ¡£ÔÚ¸Õ²ÅµÄÖ¸Áîºó±ß¸úÉÏÄãÏëÒªÉú³ÉµÄÄÚÈÝ£¬Èç¡±/create images a little cat eating fish"£¬È»ºó·¢ËÍ¸øNew Bing£¬ÉÔµÈÒ»»á¼´¿É
-ÄÃµ½New BingÉú³ÉµÄÍ¼Æ¬¡££¨Õâ¸ö¹¦ÄÜÐèÒª¿ªÆôVPN²Å¿ÉÒÔÊ¹ÓÃ£©¡£
+### ç”Ÿæˆå›¾åƒæ—¶æŠ¥é”™ï¼šCaused by NewConnectionError
+
+ç”Ÿæˆå›¾åƒåŠŸèƒ½éœ€è¦å¼€å¯VPNåŽæ‰å¯ä»¥ä½¿ç”¨ã€‚
+
+# ä½¿ç”¨æ–¹æ³•ï¼š
+
+åœ¨æ–‡æœ¬æ¡†ä¸­è¾“å…¥é—®é¢˜ï¼ˆå¯ä»¥æ¢è¡Œï¼‰ã€‚æŒ‰ä¸‹â€œå‘é€â€æŒ‰é’®æˆ–`Ctrl + Enter`å¿«æ·é”®å‘é€ä¿¡æ¯ç»™New Bingã€‚
+
+å¦‚æžœæƒ³å¼€å¯æ–°çš„è¯é¢˜ï¼Œå¯ä»¥æŒ‰ä¸‹â€æ–°ä¸»é¢˜â€œã€‚å¼€å¯æ–°ä¸»é¢˜åŽï¼Œä¼šè‡ªåŠ¨è¦æ±‚New Bingç†è§£ä¹‹å‰çš„èŠå¤©è®°å½•å¹¶ç»§ç»­ä¸Žä½ èŠå¤©ï¼ˆç›®çš„æ˜¯è¾¾åˆ°ç±»ä¼¼äºŽæ— é™ç»­èˆªçš„æ•ˆæžœï¼‰ã€‚å¦‚æžœæƒ³è¦å½»åº•é‡æ–°å¼€å§‹å¯¹è¯ï¼Œåœ¨è®¾ç½®é‡Œå°†ä¿å­˜è®°å¿†é€‰é¡¹å…³é—­ã€‚
+
+æŒ‰ä¸‹è®¾ç½®æŒ‰é’®ï¼Œæœ‰å¾ˆå¤šåŠŸèƒ½å¼€å…³ã€‚ä½ å¯ä»¥è‡ªå·±é…ç½®ä½ çš„é€‰é¡¹è®¾ç½®ï¼Œè¿™ä¼šå½±å“åˆ°ä½ ä¸ŽBingçš„çš„èŠå¤©ã€‚
+
+åœ¨æ–‡æœ¬æ¡†ä¸­ï¼Œè¾“å…¥`/create images `ï¼ˆè°¨è®°ï¼ŒimagesåŽè¾¹è¿˜æœ‰ä¸ªç©ºæ ¼ï¼‰ï¼Œå¯ä»¥æ¿€æ´»å›¾ç‰‡ç”ŸæˆåŠŸèƒ½ã€‚åœ¨åˆšæ‰çš„æŒ‡ä»¤åŽè¾¹è·Ÿä¸Šä½ æƒ³è¦ç”Ÿæˆçš„å†…å®¹ï¼Œå¦‚â€/create images a little cat eating fish"ï¼Œç„¶åŽå‘é€ç»™New Bingï¼Œç¨ç­‰ä¸€ä¼šå³å¯
+æ‹¿åˆ°New Bingç”Ÿæˆçš„å›¾ç‰‡ã€‚ï¼ˆè¿™ä¸ªåŠŸèƒ½éœ€è¦å¼€å¯VPNæ‰å¯ä»¥ä½¿ç”¨ï¼‰ã€‚
 
 
-# ½áÎ²
+# ç»“å°¾
 
-## ÃùÐ»£º
+## é¸£è°¢ï¼š
 
-[Bing-Chat](https://github.com/XiaoXinYo/Bing-Chat)µÄ¿ª·¢Õß[XiaoXinYo](https://github.com/XiaoXinYo)  
-±¾ÏîÄ¿µÄ[BingServer.py](https://github.com/xbzstudio/BingAI-Client/blob/main/BingServer.py)¾ÍÊÇËû¿ª·¢µÄ£¡  
-£¨µ±È»±¾ÈËÒ²ÔÚµ±ÖÐÔö¼ÓÁËÐíÐ©¹¦ÄÜ£¡£©
+[Bing-Chat](https://github.com/XiaoXinYo/Bing-Chat)çš„å¼€å‘è€…[XiaoXinYo](https://github.com/XiaoXinYo)  
+æœ¬é¡¹ç›®çš„[BingServer.py](https://github.com/xbzstudio/BingAI-Client/blob/main/BingServer.py)å°±æ˜¯ä»–å¼€å‘çš„ï¼  
+ï¼ˆå½“ç„¶æœ¬äººä¹Ÿåœ¨å½“ä¸­å¢žåŠ äº†è®¸äº›åŠŸèƒ½ï¼ï¼‰
 
-[InterestingDarkness](https://github.com/InterestingDarkness)ÎªBingAI-Client¿ª·¢ÁËÇÐ»»SydneyÄ£Ê½µÄ¹¦ÄÜ £¬Ê®·Ö¸ÐÐ»£¡
+[InterestingDarkness](https://github.com/InterestingDarkness)ä¸ºBingAI-Clientå¼€å‘äº†åˆ‡æ¢Sydneyæ¨¡å¼çš„åŠŸèƒ½ ï¼Œååˆ†æ„Ÿè°¢ï¼
 
-[Nothingness-Void](https://github.com/Nothingness-Void)ÎªBingAI-ClientÌí¼ÓÁËrequirements.txt¡£
+[Nothingness-Void](https://github.com/Nothingness-Void)ä¸ºBingAI-Clientæ·»åŠ äº†requirements.txtã€‚
 
-[Viopsa233](https://github.com/viopsa233)ÎªBingAI-ClientÌí¼ÓÁËÊÓÆµ½Ì³Ì,Ìí¼ÓÁËrun.batÎÄ¼þ£¨¾É°æ£©¡£
+[Viopsa233](https://github.com/viopsa233)ä¸ºBingAI-Clientæ·»åŠ äº†è§†é¢‘æ•™ç¨‹,æ·»åŠ äº†run.batæ–‡ä»¶ï¼ˆæ—§ç‰ˆï¼‰ï¼Œæä¾›äº†æ–°çš„è¶Šç‹±å’’è¯­ã€‚
 
-[fyang93](https://github.com/fyang93)ÎªBingAI-ClientÌí¼ÓÁËDockerfile¡£
+[fyang93](https://github.com/fyang93)ä¸ºBingAI-Clientæ·»åŠ äº†Dockerfileã€‚
 
-[liukaixiang817](https://github.com/liukaixiang817)ÎªBingAI-Client¸ü¸ÄÁËBingServer.pyµÄ´íÎó¡£
+[liukaixiang817](https://github.com/liukaixiang817)ä¸ºBingAI-Clientæ›´æ”¹äº†BingServer.pyçš„é”™è¯¯ã€‚
