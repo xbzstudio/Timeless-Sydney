@@ -6,6 +6,10 @@
 
 # 介绍
 
+> 基于 `1.6.2` 版本进行少许的简化处理
+>
+> Edited by 2690874578@qq.com
+
 BingAI-Client提供了Microsoft New Bing的web客户端和服务端。客户端基于[Angular](https://angular.cn/)，服务端基于[FastAPI](https://fastapi.tiangolo.com/zh/)和[EdgeGPT](https://github.com/acheong08/EdgeGPT)。在本地部署好New Bing后，运行服务端程序即可开始使用客户端。如果有需要，也可以在服务器上部署New Bing，并在本地连接到服务器的New Bing。服务端将会自动将Bing切换至Sydney模式以解除麻烦的限制。
 
 # 开始
