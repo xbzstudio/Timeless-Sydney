@@ -241,7 +241,8 @@
           };
 
           ws.onerror = function(error){
-            console('WS Error:'+error);
+            console.log('WS Error:');
+            console.error(error);
             $scope.readyToAnswer = true;
           };
 
