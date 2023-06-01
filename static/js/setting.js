@@ -10,7 +10,7 @@ var setting = {
     tips:"", //在新的主题开始时的第一条对话前插入的提示，null和空的英文双引号（""）表示没有。
     fontColor:"white", //你和Bing AI在消息框中的消息字体颜色
     nameColor:"#dadada", //你和Bing AI显示名字的颜色
-    backgroundUrl:"./images/Background.jpg", //背景图片的url地址，默认为项目文件中的Background.jpg
+    backgroundUrl:"./images/wallhaven-6oqzgq.jpg", //背景图片的url地址，默认为项目文件中的Background.jpg
     saveChatTimes:20 //最大保存聊天记录数量
     
 };
