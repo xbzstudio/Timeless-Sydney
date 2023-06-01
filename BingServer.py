@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Author: XiaoXinYo
+# Modified by 2690874578@qq.com on 2023/6/1
 
 from typing import Union, Any, AsyncGenerator
 from fastapi import FastAPI, WebSocket, Request, Response
@@ -15,16 +16,11 @@ import BingImageCreator
 import uvicorn
 import os
 from mimetypes import guess_type
+from subprocess import run
 
-server = input('是否接受来自别的计算机的请求（回答true或false）：')
-while server != 'true' and server !='false':
-    server = input('是否接受来其它的主机的请求（回答true或false）：')
-server = bool(server)
-if server:
-    HOST = '0.0.0.0'
-else:
-    HOST = '127.0.0.1'
-PORT = int(input('请输入服务器端口号（80为默认）：'))
+HOST = '0.0.0.0'
+# PORT = int(input('请输入服务器端口号([80]): ').strip() or "80")
+PORT = 80
 PROXY = ''
 COOKIE_FILE_PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/cookie.json'
 
@@ -165,6 +161,8 @@ async def checkToken() -> None:
 @APP.on_event('startup')
 async def startup() -> None:
     asyncio.get_event_loop().create_task(checkToken())
+    await asyncio.sleep(1)
+    run(["start", "http://localhost/newbing"], check=True, timeout=3, shell=True)
 
 @APP.exception_handler(404)
 def error404(request: Request, exc: Exception) -> Response:
@@ -386,8 +384,8 @@ async def image(request: Request) -> Response:
     
     return GenerateResponse().success(BingImageCreator.ImageGen(uCookie).get_images(keyword))
 
-@APP.get("/webui")
-async def get_site():
+@APP.get("/newbing")
+def get_site():
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/index.html'
     with open(filename, mode='r', encoding='utf-8') as f:
         content = f.read()
@@ -395,8 +393,9 @@ async def get_site():
     content_type, _ = guess_type(filename)
     return Response(content, media_type=content_type)
 
+
 @APP.get("/js/{filename}")
-async def get_site(filename):
+def get_site(filename):
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/js/' + str(filename)
 
     if not os.path.isfile(filename):
@@ -409,7 +408,7 @@ async def get_site(filename):
     return Response(content, media_type=content_type)
 
 @APP.get("/css/{filename}")
-async def get_site(filename):
+def get_site(filename):
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/css/' + str(filename)
 
     if not os.path.isfile(filename):
@@ -422,7 +421,7 @@ async def get_site(filename):
     return Response(content, media_type=content_type)
 
 @APP.get("/images/{filename}")
-async def get_site(filename):
+def get_site(filename):
 
     filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/images/' + str(filename)
 
@@ -436,4 +435,7 @@ async def get_site(filename):
     return Response(content, media_type=content_type)
 
 if __name__ == '__main__':
-    uvicorn.run(APP, host=HOST, port=PORT)
+    try:
+        uvicorn.run(APP, host=HOST, port=PORT)
+    except Exception as e:
+        print(e)
