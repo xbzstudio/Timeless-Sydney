@@ -2,6 +2,7 @@
 # Author: XiaoXinYo
 # Modified by 2690874578@qq.com on 2023/6/1
 
+from charset_normalizer import md__mypyc
 from typing import Union, Any, AsyncGenerator
 from fastapi import FastAPI, WebSocket, Request, Response
 from fastapi.responses import StreamingResponse
@@ -20,7 +21,7 @@ from subprocess import run
 
 HOST = '0.0.0.0'
 # PORT = int(input('请输入服务器端口号([80]): ').strip() or "80")
-PORT = 80
+PORT = 1145
 PROXY = ''
 COOKIE_FILE_PATH = str(os.path.dirname(os.path.abspath(__file__))) + '/cookie.json'
 
@@ -158,11 +159,14 @@ async def checkToken() -> None:
                 del CHATBOT[token]
         await asyncio.sleep(60)
 
+
 @APP.on_event('startup')
 async def startup() -> None:
     asyncio.get_event_loop().create_task(checkToken())
     await asyncio.sleep(1)
-    run(["start", "http://localhost/newbing"], check=True, timeout=3, shell=True)
+    cmd = ["start", "http://localhost:1145/newbing"]
+    run(cmd, check=True, timeout=3, shell=True)
+
 
 @APP.exception_handler(404)
 def error404(request: Request, exc: Exception) -> Response:
@@ -434,8 +438,17 @@ def get_site(filename):
     content_type, _ = guess_type(filename)
     return Response(content, media_type=content_type)
 
+def main():
+    if os.stat(COOKIE_FILE_PATH).st_size == 0:
+        print("请设置你的 cookie 后再使用")
+        return
+
+    uvicorn.run(APP, host=HOST, port=PORT)
+
 if __name__ == '__main__':
     try:
-        uvicorn.run(APP, host=HOST, port=PORT)
+        main()
     except Exception as e:
         print(e)
+    finally:
+        input("请按下回车来退出 >> ")
