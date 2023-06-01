@@ -1,6 +1,6 @@
 var setting = {
 
-    HOST:'127.0.0.1:80', //你要连接到的服务器IP或域名，如果BingAI服务器端口不为80，请在后面加上":端口值"。默认为127.0.0.1，即为访问本地服务器。
+    HOST:'127.0.0.1:1145', //你要连接到的服务器IP或域名，如果BingAI服务器端口不为80，请在后面加上":端口值"。默认为127.0.0.1，即为访问本地服务器。
     autoTranslate:true, //是否默认启用自动翻译，true为是，false为否
     tokenToServer:true, //是否默认启用连续对话，true为是，false为否
     autoScroll:true, //是否在Bing回复送达后自动滚动至页面底部，true为是，false为否
