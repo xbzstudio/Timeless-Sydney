@@ -32,10 +32,10 @@ https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8
 ## 图文教程
 </summary>
   
-部署前，确保你拥有 `Python` 的稳定高版本（推荐3.10），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
+部署前，确保你拥有 `Python` 的稳定高版本（≥3.9，推荐3.11），一个 `VPN` ，还有一个可以使用New Bing的 `Microsoft账号` 。
 
 相关链接：  
-Python 3.10.10下载：[https://www.python.org/downloads/release/python-31010/](https://www.python.org/downloads/release/python-31010/)  
+Python 3.11下载：打开电脑上的Microsoft Store（微软商店），搜索Python，进入Python 3.11，下载并安装（过程很快，并且自动加入环境变量）
 Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe)
 
 
@@ -43,7 +43,7 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 
 
 
-首先确保你有高版本的Python（推荐3.10），这里不过多赘述。
+首先确保你有高版本的Python（推荐3.11），这里不过多赘述。
 
 首先下载本项目的ZIP压缩包，解压。
 
@@ -117,7 +117,7 @@ pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host 
 
 ## 默认聊天设置更改
 
-进入./static/src/js文件夹后，就可以看到一个名为“setting.js”的文件。打开这个文件，里面储存着一段代码，默认是这样：
+进入./static/js文件夹后，就可以看到一个名为“setting.js”的文件。打开这个文件，里面储存着一段代码，默认是这样：
 
 ```javascript
 var setting = {
@@ -146,7 +146,7 @@ var setting = {
 
 ### 头像更改
 
-进入./static/src/images文件夹，里面有两张图片，一个是`User.png`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"User.png"或"Bing.png"。
+进入./static/images文件夹，里面有两张图片，一个是`User.png`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"User.png"或"Bing.png"。
 
 ## 一些疑难解答：
 
