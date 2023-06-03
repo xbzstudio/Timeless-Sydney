@@ -96,6 +96,12 @@ pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host 
 cd /d 你的项目文件夹的绝对路径（如C:\Users\33664\OneDrive\XBZ-BingClient）
 pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 ```
+  
+然后再输入
+  
+```
+  pip install EdgeGPT==0.6.10
+```
 
 过程可能会有点长。第三方包全部安装完毕后，在项目文件根目录中打开终端，然后输入命令 `python ./BingServer.py` ，如果没有报错，那就说明成功了。
 
