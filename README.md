@@ -36,7 +36,7 @@ https://github.com/viopsa233/BingAI-Client/assets/118115208/dea14d0a-7c05-4938-8
 
 相关链接：  
 Python 3.11下载：打开电脑上的Microsoft Store（微软商店），搜索Python，进入Python 3.11，下载并安装（过程很快，并且自动加入环境变量）
-Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.7.10/geph-windows-setup.exe)
+Geph迷雾通下载：[https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-stable/4.8.5/geph-windows-setup.exe](https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-stable/4.8.5/geph-windows-setup.exe)
 
 
 # 自动部署
