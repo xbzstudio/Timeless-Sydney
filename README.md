@@ -230,3 +230,5 @@ var setting = {
 [fyang93](https://github.com/fyang93)为BingAI-Client添加了Dockerfile。
 
 [liukaixiang817](https://github.com/liukaixiang817)为BingAI-Client更改了BingServer.py的错误。
+
+[xy-cloud](https://github.com/xy-cloud-cn)为BingAI-Client添加了EasyStart.py。
