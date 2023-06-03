@@ -105,12 +105,6 @@ pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host 
 
 过程可能会有点长。第三方包全部安装完毕后，在项目文件根目录中打开终端，然后输入命令 `python ./BingServer.py` ，如果没有报错，那就说明成功了。
 
-如果报错，请将EdgeGPT调整至0.6.10版本。
-
-```
-pip install EdgeGPT==0.6.10
-```
-
 到这里，你就成功地部署在本地的New Bing。接下来，打开static下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
 
 记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
