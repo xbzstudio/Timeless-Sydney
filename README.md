@@ -74,7 +74,7 @@ Geph迷雾通下载：[https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-s
 
 ## 1，安装并部署BingAI-Client
 
-首先确保你有高版本的Python（推荐3.10），这里不过多赘述。
+首先确保你有高版本的Python（推荐3.11），这里不过多赘述。
 
 首先下载本项目的ZIP压缩包，解压。
 
