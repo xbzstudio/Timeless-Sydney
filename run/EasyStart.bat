@@ -1,0 +1,1 @@
+python ../EasyStart.py -b
