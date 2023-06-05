@@ -1,4 +1,1 @@
-{
-"AllowConnect" : true,
-"Port" : 80
-}
+{"AllowConnect": true, "Port": 80}

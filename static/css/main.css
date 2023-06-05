@@ -72,7 +72,7 @@
   font-size: 14px;
   font-weight: 700;
   font-family: "Microsoft soft";
-  resize:none;
+  resize:vertical;
 }
 .demoInput:focus{
     border-color: #66afe9;

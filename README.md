@@ -225,6 +225,10 @@ Port表示的是端口，默认为80。当端口出现冲突，可以更改为80
 在文本框中，输入`/create images `（谨记，images后边还有个空格），可以激活图片生成功能。在刚才的指令后边跟上你想要生成的内容，如”/create images a little cat eating fish"，然后发送给New Bing，稍等一会即可
 拿到New Bing生成的图片。（这个功能需要开启VPN才可以使用）。
 
+## 手机客户端
+
+因为index.html不兼容手机端（操作界面糊成一团），所以在1.7版本中，更新了phone.html来解决这个问题。在手机端上，访问目标的`ip或域名:端口/phoneui`就可以使用手机来使用BingAI-Client客户端了。
+
 ## 服务端
 
 进入config文件夹，打开`server.json`，将AllowConnect的值更改为true，保存退出，再运行`BingServer.py`（打开`run.bat`），程序就会允许别的主机连接你的电脑并使用New Bing。内网ip、公网ip和域名都可以进行访问（只要端口正确）。相反，如果AllowConnect为false，只能在本地用127.0.0.1/webui或打开index.html文件来使用New Bing。如果你想要和你的家人共享AI的使用，或者用别的设备使用该客户端而不再重新部署，可以尝试使用这种方法。
