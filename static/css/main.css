@@ -80,37 +80,122 @@
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
 }
-.inputBox
-{
-  position: fixed;
-  bottom: 2%;
-  margin-left: 15%;
-  float:left;
-}
-.inputBox2
+.inputBox1
 {
   position: fixed;
   bottom: 2%;
   margin-left: 0%;
   float:left;
 }
+.inputBox2
+{
+  position: fixed;
+  width: 15%;
+  bottom: 2%;
+  margin-left: 15%;
+  float:left;
+}
+.inputBox3
+{
+  position: fixed;
+  bottom: 2%;
+  margin-right: 5%;
+  margin-left: 70%;
+  float: left;
+}
+@media screen and (max-width: 1000px) and (min-width: 750px){
+  .inputBox1
+  {
+    position: fixed;    
+    bottom: 10%;
+    margin-left: 0%;
+    float:left;
+  }
+  .inputBox2
+  {
+    position: fixed;
+    width: 25%;
+    bottom: 2%;
+    margin-left: 5%;
+    float:left;
+  }
+  .inputBox3
+  {
+    position: fixed;
+    bottom: 10%;
+    margin-left: 60%;
+    float: left;
+  }
+}
+@media screen and (max-width: 750px) {
+  .inputBox1
+  {
+    position: fixed;    
+    bottom: 13%;
+    margin-left: 0%;
+    float:left;
+  }
+  .inputBox2
+  {
+    position: fixed;
+    width: 25%;
+    bottom: 2%;
+    margin-left: 5%;
+    float:left;
+  }
+  .inputBox3
+  {
+    position: fixed;
+    bottom: 13%;
+    margin-left: 40%;
+    float: left;
+  }
+}
 #frozen-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 button {
   border: 0;
   margin: 6px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: bold;
   padding: 15px 50px;
   border-radius: 50px;
   color: white;
   outline: none;
   position: relative;
+}
+@media screen and (max-width: 1000px) and (min-width: 750px){
+  button {
+    border: 0;
+    margin: 6px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+    position: relative;
+  }
+}
+@media screen and (max-width: 750px){
+  button {
+    border: 0;
+    margin: 6px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+    position: relative;
+  }
 }
 
 button:before{
@@ -178,7 +263,6 @@ button:before{
 .loadingSeven{
   width: 80px;
   height: 40px;
-  margin: 0 auto;
 }
 .loadingSeven span{
     display: inline-block;
