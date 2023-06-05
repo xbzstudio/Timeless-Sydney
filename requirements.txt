@@ -1,6 +1,0 @@
-aiohttp
-fastapi
-python-multipart
-uvicorn
-EdgeGPT==0.6.10
-BingImageCreator
