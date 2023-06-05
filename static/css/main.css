@@ -255,10 +255,38 @@ button:before{
   margin-right:22%;
   margin-bottom: 2%;
 }
+@media screen and (max-width: 1000px) and (min-width: 750px){
+  .reply{
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom: 2%;
+  }
+}
+@media screen and (max-width: 750px){
+  .reply{
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom: 2%;
+  }
+}
 .headImg{
   height: 5%;
   width: 5%;
   float:left;
+}
+@media screen and (max-width: 1000px) and (min-width: 750px){
+  .headImg{
+    height: 4%;
+    width: 5%;
+    float:left;
+  }
+}
+@media screen and (max-width: 750px){
+  .headImg{
+    height: 3%;
+    width: 7%;
+    float:left;
+  }
 }
 .loadingSeven{
   width: 80px;
