@@ -253,3 +253,5 @@ Port表示的是端口，默认为80。当端口出现冲突，可以更改为80
 [liukaixiang817](https://github.com/liukaixiang817)为BingAI-Client更改了BingServer.py的错误。
 
 [xy-cloud](https://github.com/xy-cloud-cn)为BingAI-Client添加了EasyStart.py。
+
+[XiaoJiang0208](https://github.com/XiaoJiang0208)为BingAI-Client编写了更好的手机端页面，并且增加QuickSetup.py
