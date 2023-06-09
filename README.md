@@ -64,11 +64,9 @@ Geph迷雾通下载：[https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-s
 
 如果报错了，就运行Run文件夹下的`Update Libs.bat`后，再试一次。
 
-到这里，你就成功地部署在本地的New Bing。接下来，打开static下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
+到这里，你就成功地部署在本地的New Bing。
 
 记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
-
-如果您有特殊需求，可以访问[BingAI-Client在线版](https://xbzstudio.github.io/BingAI-Client/) 。但是架在这个Github Pages上的客户端的默认设置不能被你所更改，而且还是需要你自己运行服务端程序。如果你既想使用自己的默认设置，又想用别的服务器请求New Bing的响应，可以将BingAI-Client架在你的服务器上，使用在本地默认设置中将HOST设为你要连接到的服务器公网ip+端口，然后打开本地index.html文件，即可依赖你的服务器与New Bing对话，并且不用在本地开启BingServer.py（服务器开启即可），并使用自己的默认设置。如果想在网站上用自己的默认设置与New Bing对话，可以在你的服务器中自行将默认设置设置为你想要的，然后使用你的服务器的`公网ip/域名+端口/webui`访问你的定制版在线BingAI-Client，也是不用在本地开启BingServer.py（服务器开启即可）。
 
 # 手动部署
 
@@ -106,12 +104,10 @@ pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host 
 ```
 
 过程可能会有点长。第三方包全部安装完毕后，在项目文件根目录中打开终端，然后输入命令 `python ./BingServer.py` ，如果没有报错，那就说明成功了。
-
-到这里，你就成功地部署在本地的New Bing。接下来，打开static下的"index.html"，或在浏览器中访问`127.0.0.1:端口号/webui`就可以开始使用该客户端了！
+  
+到这里，你就成功地部署在本地的New Bing。
 
 记得在使用客户端的全过程中不要关闭终端。BingServer的连接十分稳定，请放心。
-
-如果您有特殊需求，可以访问[BingAI-Client在线版](https://xbzstudio.github.io/BingAI-Client/) 。但是架在这个Github Pages上的客户端的默认设置不能被你所更改，而且还是需要你自己运行服务端程序。如果你既想使用自己的默认设置，又想用别的服务器请求New Bing的响应，可以将BingAI-Client架在你的服务器上，使用在本地默认设置中将HOST设为你要连接到的服务器公网ip+端口，然后打开本地index.html文件，即可依赖你的服务器与New Bing对话，并且不用在本地开启BingServer.py（服务器开启即可），并使用自己的默认设置。如果想在网站上用自己的默认设置与New Bing对话，可以在你的服务器中自行将默认设置设置为你想要的，然后使用你的服务器的`公网ip/域名+端口/webui`访问你的定制版在线BingAI-Client，也是不用在本地开启BingServer.py（服务器开启即可）。
 
 </details>
 
@@ -157,6 +153,10 @@ var setting = {
 这是一个用于配置服务端的json文件。其中，AllowConnect表示是否允许别的主机连接New Bing，默认为true也就是允许。如果不想对外开放，可以改成false；
 
 Port表示的是端口，默认为80。当端口出现冲突，可以更改为80以外的值来解决问题。
+
+## 快速配置
+
+进入run文件夹，打开`Quick Setup.bat`以快速配置BingAI-Client。
 
 
 # 其他
@@ -216,27 +216,37 @@ Port表示的是端口，默认为80。当端口出现冲突，可以更改为80
 
 # 使用方法：
 
+## 打开方式
+
+在服务器上部署完BingAI-Client，并开始运行`BingServer.py`后，就可以开始使用客户端了。
+
+如果服务端设置`AllowConnect`为true，那么在服务器上，可以通过`127.0.0.1:端口/webui`来访问客户端，也可以在static文件夹中打开`index.html`来访问客户端。而在别的设备上，如果是内网连接，可以使用`服务器内网ip:端口/webui`来访问客户端，如果服务器有公网ip或域名，可以`公网ip/域名:端口/webui`访问。
+
+如果服务端设置`AllowConnect`为false，那么只能在服务器上访问客户端。可以通过`127.0.0.1:端口/webui`或打开static文件夹下的`index.html`来访问。
+
+如有特殊需求，可以访问该项目在[Github Pages上的静态网页版](https://xbzstudio.github.io/BingAI-Client/static)。
+
+## 基础用法
+
 在文本框中输入问题（可以换行）。按下“发送”按钮或`Ctrl + Enter`快捷键发送信息给New Bing。
 
 如果想开启新的话题，可以按下”新主题“。开启新主题后，会自动要求New Bing理解之前的聊天记录并继续与你聊天（目的是达到类似于无限续航的效果）。如果想要彻底重新开始对话，在设置里将保存记忆选项关闭。
 
 按下设置按钮，有很多功能开关。你可以自己配置你的选项设置，这会影响到你与Bing的的聊天。
 
+## 图片生成
+
 在文本框中，输入`/create images `（谨记，images后边还有个空格），可以激活图片生成功能。在刚才的指令后边跟上你想要生成的内容，如”/create images a little cat eating fish"，然后发送给New Bing，稍等一会即可
 拿到New Bing生成的图片。（这个功能需要开启VPN才可以使用）。
 
-## 手机客户端
-
-因为index.html不兼容手机端（操作界面糊成一团），所以在1.7版本中，更新了phone.html来解决这个问题。在手机端上，访问目标的`ip或域名:端口/phoneui`就可以使用手机来使用BingAI-Client客户端了。
-
 ## 服务端
 
-进入config文件夹，打开`server.json`，将AllowConnect的值更改为true，保存退出，再运行`BingServer.py`（打开`run.bat`），程序就会允许别的主机连接你的电脑并使用New Bing。内网ip、公网ip和域名都可以进行访问（只要端口正确）。相反，如果AllowConnect为false，只能在本地用127.0.0.1/webui或打开index.html文件来使用New Bing。如果你想要和你的家人共享AI的使用，或者用别的设备使用该客户端而不再重新部署，可以尝试使用这种方法。
+进入config文件夹，打开`server.json`，将AllowConnect的值更改为true，保存退出，再运行`BingServer.py`（打开`Run.bat`），程序就会允许别的主机连接你的电脑并使用New Bing。内网ip、公网ip和域名都可以进行访问（只要端口正确）。相反，如果AllowConnect为false，只能在本地用127.0.0.1/webui或打开index.html文件来使用New Bing。如果你想要和你的家人共享AI的使用，或者用别的设备使用该客户端而不再重新部署，可以尝试使用这种方法。
 
 
 # 结尾
 
-## 鸣谢：
+## 本项目的共同建设者：
 
 [Bing-Chat](https://github.com/XiaoXinYo/Bing-Chat)的开发者[XiaoXinYo](https://github.com/XiaoXinYo)  
 本项目的[BingServer.py](https://github.com/xbzstudio/BingAI-Client/blob/main/BingServer.py)就是他开发的！  
@@ -254,4 +264,6 @@ Port表示的是端口，默认为80。当端口出现冲突，可以更改为80
 
 [xy-cloud](https://github.com/xy-cloud-cn)为BingAI-Client添加了EasyStart.py。
 
-[XiaoJiang0208](https://github.com/XiaoJiang0208)为BingAI-Client编写了更好的手机端页面，并且增加QuickSetup.py
+[XiaoJiang0208](https://github.com/XiaoJiang0208)为BingAI-Client编写了更好的手机端页面，并且增加QuickSetup.py。
+
+## 正是有了这些建设者的努力，才有 BingAI-Client今天的模样。感谢！
