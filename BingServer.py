@@ -441,14 +441,5 @@ async def get_site(filename):
     content_type, _ = guess_type(filename)
     return Response(content, media_type=content_type)
 
-@APP.get("/phoneui")
-async def get_site():
-    filename = str(os.path.dirname(os.path.abspath(__file__))) + '/static/phone.html'
-    with open(filename, mode='r', encoding='utf-8') as f:
-        content = f.read()
-
-    content_type, _ = guess_type(filename)
-    return Response(content, media_type=content_type)
-
 if __name__ == '__main__':
     uvicorn.run(APP, host=HOST, port=PORT)
