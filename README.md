@@ -56,7 +56,8 @@ var settings = {
 接下来你只要根据这段代码的中文注释来更改配置即可更改你的默认设置。
 在更改你的默认设置后，打开本地客户端时，你的聊天设置会更改为默认设置中的那样。例如你在默认设置中表示你想要让style更改为"balanced"，那么在打开本地客户端时，聊天设置中的聊天风格设置将会自动更改为balanced。
 
-![Uploading image.png…]()
+![image](https://github.com/xbzstudio/Timeless-Sydney/assets/119436353/1679dbf4-1b4a-4f14-a3d2-a81ab18769a7)
+
 
 
 ## 服务端配置
