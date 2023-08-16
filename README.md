@@ -17,7 +17,7 @@ Timeless Sydney提供了Microsoft New Bing的更加易用的web客户端，以�
 相关链接：  
 Python官网：[https://python.org](https://python.org)
   
-Geph迷雾通下载：[https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-stable/4.8.5/geph-windows-setup.exe](https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-stable/4.8.5/geph-windows-setup.exe)
+Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.8.9/geph-windows-setup.exe](https://f001.backblazeb2.com/file/geph4-dl/geph-releases/windows-stable/4.8.9/geph-windows-setup.exe)
 
 下载本项目，将其解压。  
 下载[Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm)浏览器插件。
