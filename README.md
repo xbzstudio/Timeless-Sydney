@@ -27,7 +27,12 @@ Geph迷雾通下载：[https://sos-ch-dk-2.exo.io/utopia/geph-releases/windows-s
 cd /d yourFilePath
 pip install -r requirements.txt
 ```
-部署完毕，再在终端输入`python main.py`，然后在浏览器访问127.0.0.1即可开始使用客户端。
+部署完毕，再在终端输入`python main.py`，然后在浏览器访问[127.0.0.1](http://127.0.0.1)或[我们的官方网站](https://xbzstudio.github.io/Timeless-Sydney)即可开始使用客户端。
+
+你也可以在Edge侧边栏中固定我们的官方网站，这样就可以使用Timeless Sydney代替默认的Discover。
+
+![image](https://github.com/xbzstudio/Timeless-Sydney/assets/119436353/45a1fd08-ab36-4ae4-91c0-cf9c2aaf04db)
+
 
 # 配置New Bing
 
@@ -50,6 +55,9 @@ var settings = {
 
 接下来你只要根据这段代码的中文注释来更改配置即可更改你的默认设置。
 在更改你的默认设置后，打开本地客户端时，你的聊天设置会更改为默认设置中的那样。例如你在默认设置中表示你想要让style更改为"balanced"，那么在打开本地客户端时，聊天设置中的聊天风格设置将会自动更改为balanced。
+
+![Uploading image.png…]()
+
 
 ## 服务端配置
 
