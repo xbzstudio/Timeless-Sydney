@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timeless Sydney v1.8</title>
+        <link rel="shortcut icon" href="./static/Bing.png">
+        <base target="_blank" />
+        <meta charset="utf-8">
+        <script src="./static/angular.min.js"></script>
+        <link rel="stylesheet" href="./static/default.min.css">
+        <link rel="stylesheet" href="./static/main.css">
+        <script src="./static/highlight.min.js"></script>
+        <script src="./static/marked.min.js"></script>
+        <link rel="stylesheet" href="./static/mdui.min.css">
+    </head>
+    <body style="margin:0px;background-size:cover;background-attachment: fixed;">
+        <div ng-app="BingAI" ng-controller="BingCTRL">
+            <div class="chat">
+                <br><br><br>
+                <div ng-repeat="msg in chatHistory" style="clear:both;">
+                    <br><br><br>
+                    <div class="message" style="margin-top:0px;">
+                        <img src="{{msg.headimg}}" style="float:left;margin-top:0.5%;margin-left:45%;width:30px;height:30px;"><br>
+                        <p style="font-size:18;color:white;margin:0px;">{{msg.user}}</p>
+                        <div style="clear:both;"></div>
+                        <div style="text-align: center;">
+                        <p style="color:white;font-size:15;white-space: pre-line;" ng-bind-html="msg.content"></p>
+                        </div>
+                        <div style="margin-left:28%;">
+                            <div ng-repeat="url in msg.urls">
+                                <a href="{{url.url}}" style="float:left;margin-left:3%;font-size: 17;">{{url.name}}</a>
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        <br>
+                        <div style="margin-left:25%;">
+                            <div ng-repeat="sug in msg.suggested">
+                                <button class="mdui-btn mdui-color-blue mdui-ripple mdui-btn-dense mdui-btn-raised" style="float:left;margin-right:2%;" ng-click="useSug(sug)">{{sug}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <!-- 使用顶部栏类包裹按钮和标题 -->
+            <div class="topbar">
+                <h3 class="title">Timeless Sydney v1.8</h3>
+                <button class="mdui-btn mdui-color-green mdui-ripple mdui-ripple-yellow mdui-btn-raised" ng-click="newConnect()">
+                    重连
+                </button>
+                <button class="mdui-btn mdui-color-grey mdui-ripple mdui-ripple-black mdui-btn-raised" mdui-dialog="{target: '#settings'}">
+                    设置
+                </button>
+                <!-- 使用标题类给标题添加样式 -->
+            </div>
+            <div class="mdui-dialog" id="settings">
+                <div class="mdui-dialog-title">设置</div>
+                <div class="mdui-dialog-content">
+                    <p>在此配置你的专属客户端</p>
+                    <div ng-show="usc">
+                        <p style="margin:0px;">Cookie(必填):</p>
+                        <div class="mdui-textfield" style="padding:0px;">
+                            <input class="mdui-textfield-input" type="text" placeholder="User Cookie" ng-model="cookie" style="padding:0px;">
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin:0px;">连接至的服务器地址:</p>
+                        <div class="mdui-textfield" style="padding:0px;">
+                            <input class="mdui-textfield-input" type="text" placeholder="Host" ng-model="host" style="padding:0px;">
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin:0px;">服务器端口:</p>
+                        <div class="mdui-textfield" style="padding:0px;">
+                            <input class="mdui-textfield-input" type="text" placeholder="Port" ng-model="port" style="padding:0px;">
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin:0px;">背景图像地址:</p>
+                        <div class="mdui-textfield" style="padding:0px;">
+                            <input class="mdui-textfield-input" type="text" placeholder="BackgroundUrl" ng-model="backgroundUrl" style="padding:0px;">
+                        </div>
+                        <button class="mdui-btn mdui-ripple mdui-color-grey mdui-btn-dense mdui-btn-raised" ng-click="refreshBackground()">刷新背景</button>
+                    </div>
+                    <div>
+                        <p style="margin:0px;">聊天风格:</p>
+                        <select class="mdui-select" mdui-select="{position: 'bottom'}" ng-model="style">
+                            <option value="creative">creative</option>
+                            <option value="balanced">balanced</option>
+                            <option value="precise">precise</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p style="margin:0px;">咒语:</p>
+                        <div class="mdui-textfield" style="padding:0px;">
+                            <input class="mdui-textfield-input" type="text" placeholder="Tip" ng-model="tipName" style="padding:0px;">
+                        </div>
+                        <p style="margin:0px;">Timeless Sydney提供了内置的咒语模板,仅需要在输入框中输入模板的名称,就可以使用该模板,而不需要手动黏贴咒语.</p>
+                        <p style="margin:0px;">如果想要使用自己的咒语,也可以在输入框直接黏贴,Timeless Sydney会自动判定为一个单独的咒语,并使用它.</p>
+                        <p style="margin: 0px;">以下是项目部署者提供的所有目前可使用模板的名称:</p>
+                        <div ng-repeat="tip in canChooseTips">
+                            <a style="margin-right:3%;float:left;">{{tip}}</a>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div>
+                        <p style="margin:0px;">使用wss协议:</p>
+                        <label class="mdui-checkbox">
+                            <input type="checkbox"/ ng-model="wss">
+                            <i class="mdui-checkbox-icon"></i>
+                            {{wss}}
+                        </label>
+                    </div>
+                </div>
+                <div class="mdui-dialog-actions">
+                  <button class="mdui-btn mdui-ripple" mdui-dialog-close>完成</button>
+                </div>
+            </div>
+            <div class="inputbox">
+                <div>
+                    <div class="mdui-textfield mdui-textfield-floating-label" style="float:left;">
+                        <label class="mdui-textfield-label">用户信息</label>
+                        <textarea class="mdui-textfield-input mdui-color-white" maxlength="4000" id="textareaSty" style="min-height: 75px;max-height: 150px;" ng-model="userInput"></textarea>
+                    </div>
+                    <div class="mdui-textfield-helper">Ctrl + Enter 以快捷发送</div>
+                    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-blue" id="sendButton" ng-click="sendMessage()"><p style="margin:0px;color:rgb(255, 255, 255);">发送</p></button>
+                </div>
+            </div>
+            <script src="./static/mdui.min.js"></script>
+            <script src="./config/client.js"></script>
+            <script type="module">
+                var textarea = document.getElementById('textareaSty');
+                var button = document.getElementById('sendButton')
+                textarea.addEventListener('keydown', function(e) {
+                    if (e.ctrlKey && (e.keyCode == 13 || e.keyCode == 10)) {
+                    // Ctrl + Enter pressed
+                        button.click(); // trigger the button's onclick function
+                    }
+                })
+                var app = angular.module('BingAI', [])
+                app.controller('BingCTRL',function($scope, $sce){
+                    $scope.chatHistory = [{
+                        'content' : $sce.trustAsHtml(marked.parse('🎉欢迎来到Timeless Sydney v1.8！🎉\n在这里,你可以:**角色扮演,搜索信息,获取有用答案,还有更多!做你想做的任何事,没有任何限制!**\n如果喜欢本项目,请多多支持微软的New Bing,以及该客户端的唯一作者xbzstudio!\n**在下面的Links中查看更多!**')),
+                        'user' : 'System',
+                        'headimg' : './static/Bing.png',
+                        'suggested' : ['Hello', '你好'],
+                        'urls' : [{'name' : 'Github', 'url' : 'https://github.com/xbzstudio/Timeless-Sydney'},
+                            {'name' : 'BiliBili', 'url' : 'https://space.bilibili.com/289282595?spm_id_from=333.1007.0.0'},
+                            {'name' : 'Microsoft New Bing', 'url' : 'https://bing.com/new'}
+                        ]
+                    }]
+                    $scope.bingTyping = true
+                    $scope.backgroundUrl = settings.backgroundUrl
+                    $scope.style = settings.style
+                    $scope.tipName = settings.tipName
+                    $scope.cookie = settings.cookie
+                    $scope.host = settings.connectTo
+                    $scope.port = settings.port
+                    $scope.wss =settings.wss
+                    $scope.userInput = ''
+                    $scope.usc = false
+                    $scope.tipList = []
+                    $scope.lastTip = ''
+
+                    function getTipList(){
+                        var http = new XMLHttpRequest()
+                        http.open('GET', $scope.host+':'+$scope.port + '/chat/getTipNames')
+                        http.onreadystatechange = function(){
+                            if (http.readyState == 4) {
+                                if (http.status == 200){
+                                    $scope.$apply(function(){
+                                        var res = eval(http.responseText)
+                                        $scope.tipList = res[0]
+                                        $scope.canChooseTips = res[0]
+                                        $scope.usc = res[1]
+                                    })
+                                }
+                            }
+                        }
+                        http.send()
+                    }
+
+                    getTipList()
+
+                    $scope.refreshBackground = function(){
+                        document.body.style.backgroundImage = "url(" + $scope.backgroundUrl + ")";
+                    }
+                    $scope.refreshBackground()
+
+                    $scope.chooseTip = function(chooseTipName){
+                        $scope.$apply(function(){
+                            if (!(chooseTipName == $scope.lastTip)){
+                                $scope.tipName = chooseTipName
+                            }
+                        })
+                    }
+
+                    $scope.useSug = function(sData){
+                        $scope.$applyAsync(function(){
+                            $scope.userInput = sData
+                        })
+                    }
+
+                    var wsclient
+
+                    $scope.newConnect = function(){
+                        $scope.tipName = settings.tipName
+                        $scope.lastTip = ''
+                        if ($scope.wss){
+                            if ($scope.host.includes('https://')){
+                                wsclient = new WebSocket('wss://' + $scope.host.substring(8) + ':' + $scope.port + '/chat/ws')
+                            }
+                            else{
+                                wsclient = new WebSocket('wss://' + $scope.host.substring(7) + ':' + $scope.port + '/chat/ws')
+                            }
+                        }
+                        else{
+                            if ($scope.host.includes('https://')){
+                                wsclient = new WebSocket('ws://' + $scope.host.substring(8) + ':' + $scope.port + '/chat/ws')
+                            }
+                            else{
+                                wsclient = new WebSocket('ws://' + $scope.host.substring(7) + ':' + $scope.port + '/chat/ws')
+                            }
+                        }
+                        $scope.bingTyping = false;
+
+                        wsclient.onopen = function(){
+                            if ($scope.usc){
+                                wsclient.send($scope.cookie)
+                            }
+                        }
+                        
+                        wsclient.onclose = function(){
+                            $scope.$applyAsync(function(){
+                                $scope.chatHistory.push({
+                                    'content' : $sce.trustAsHtml('❌连接丢失❌'),
+                                    'user' : 'System',
+                                    'headimg' : './static/Bing.png',
+                                    'suggested' : [],
+                                    'urls' : []})
+                            })
+                        }
+
+                        wsclient.onerror = function(event){
+                            $scope.$applyAsync(function(){
+                                $scope.chatHistory.push({
+                                    'content' : $sce.trustAsHtml('发生错误:' + event),
+                                    'user' : 'System',
+                                    'headimg' : './static/Bing.png',
+                                    'suggested' : [],
+                                    'urls' : []})
+                            })
+                        }
+
+                        wsclient.onmessage = function(event){
+                            var msg = eval("("+event.data+")")
+                            console.log(msg.answer)
+                            $scope.$applyAsync(function(){
+                                if (!msg.done){
+                                    $scope.chatHistory[$scope.chatHistory.length - 1].content = $sce.trustAsHtml(marked.parse(msg.answer))
+                                    $scope.chatHistory[$scope.chatHistory.length - 1].user = 'New Bing'
+                                    $scope.chatHistory[$scope.chatHistory.length - 1].headimg = './static/Bing.png'
+                                    $scope.chatHistory[$scope.chatHistory.length - 1].suggested = msg.suggested
+                                    $scope.chatHistory[$scope.chatHistory.length - 1].urls = msg.urls
+                                    hljs.highlightAll()
+                                }
+                                else{
+                                    if (msg.error){
+                                        $scope.chatHistory[$scope.chatHistory.length - 1] = $scope.chatHistory[$scope.chatHistory.length - 1] + '\n' +msg.error
+                                        $scope.bingTyping = false
+                                        hljs.highlightAll()
+                                    }
+                                    else{
+                                        $scope.chatHistory[$scope.chatHistory.length - 1].content = $sce.trustAsHtml(marked.parse(msg.answer))
+                                        $scope.chatHistory[$scope.chatHistory.length - 1].user = 'New Bing'
+                                        $scope.chatHistory[$scope.chatHistory.length - 1].headimg = './static/Bing.png'
+                                        $scope.chatHistory[$scope.chatHistory.length - 1].suggested = msg.suggested
+                                        $scope.chatHistory[$scope.chatHistory.length - 1].urls = msg.urls
+                                        $scope.bingTyping = false
+                                        hljs.highlightAll()
+                                    }
+                                }
+                                window.scrollTo(0, document.body.scrollHeight);
+                            })
+                        }
+                    }
+
+                    $scope.sendMessage = function(){
+                        if (!$scope.bingTyping){
+                            if ($scope.userInput){
+                                $scope.bingTyping = true
+                                $scope.chatHistory[$scope.chatHistory.length - 1].suggested = []
+                                $scope.chatHistory.push({
+                                    'content' : $sce.trustAsHtml($scope.userInput),
+                                    'user' : 'User',
+                                    'headimg' : './static/User.png',
+                                    'suggested' : [],
+                                    'urls' : []})
+                                $scope.chatHistory.push({
+                                    'content' : $sce.trustAsHtml('Typing...'),
+                                    'user' : 'New Bing',
+                                    'headimg' : './static/Bing.png',
+                                    'suggested' : [],
+                                    'urls' : []})
+                                wsclient.send('{"tipName" : "'+$scope.tipName+'", "question":"'+$scope.userInput+'", "style":"'+$scope.style+'"}')
+                                $scope.userInput = ''
+                                $scope.lastTip = $scope.tipName
+                                $scope.tipName = 'Bing'
+                                window.scrollTo(0, document.body.scrollHeight);
+                            }
+                        }
+                    }
+
+                    $scope.newConnect()
+
+                    $scope.bingTyping = false
+                })
+            </script>
+        </div>
+    </body>
+</html>

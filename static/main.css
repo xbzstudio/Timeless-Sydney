@@ -1,0 +1,138 @@
+            /* 定义一个顶部栏的类 */
+            .topbar {
+                /* 设置为固定定位，相对于浏览器窗口 */
+                position: fixed;
+                /* 设置顶部和左右边距为 0 */
+                top: 0;
+                left: 0;
+                right: 0;
+                /* 设置高度为 50px */
+                height: 50px;
+                /* 设置背景颜色为白色 */
+                background-color: rgba(255, 255, 255, 0.5);
+                /* 设置为弹性盒子布局，水平排列 */
+                display: flex;
+                flex-direction: row;
+                /* 设置子元素垂直居中对齐 */
+                align-items: center;
+                /* 设置子元素水平居中对齐 */
+                justify-content: center;
+                backdrop-filter: blur(30px);
+            }
+
+            /* 定义一个标题的类 */
+            .title {
+                /* 设置字体大小为 24px */
+                font-size: 20px;
+                color:white;
+            }
+
+            .message{
+                margin-top:100px;
+                margin-left:5%;
+                margin-right:5%;
+                background-color: rgba(152, 152, 152, 0.5);
+                backdrop-filter: blur(15px);
+            }
+
+            a{
+                background-image:-webkit-linear-gradient(right, #039ac8,#10c74d);
+                -webkit-background-clip:text;
+                -webkit-text-fill-color:transparent;
+                text-decoration:none;
+            }
+
+            code{
+                text-align: left;
+                margin-left:20%;
+                margin-right:20%;
+            }
+
+            img{
+                height:300px;width:300px;
+                float:left;
+            }
+
+
+            /* 当屏幕宽度大于等于 500px 时，应用以下样式 */
+            @media screen and (min-width: 500px) {
+                /* 改变标题的水平对齐方式为居中 */
+                .title {
+                    text-align: center;
+                    /* 改变标题的左右外边距为自动，以使其居中显示 */
+                    margin-left: auto; 
+                    margin-right: auto;
+                }
+            }
+
+            /* 当屏幕宽度小于 500px 时，应用以下样式 */
+            @media screen and (max-width: 500px) {
+                /* 改变顶部栏的高度为 100px */
+                .topbar {
+                    height: 100px;
+                    /* 改变顶部栏的排列方向为垂直 */
+                    flex-direction: column;
+                }
+
+                /* 改变标题的上边距为 10px，以增加与按钮的间距 */
+                .title {
+                    margin-top: 10px;
+                    margin-bottom: 0px;
+                }
+
+                /* 改变按钮的显示顺序为 -1，使其在标题前面显示 */
+                button {
+                    order: -1;
+                }
+            }
+            @media screen and (max-width:750px){
+                .inputbox{
+                    position: fixed;
+                    bottom:2px;
+                    margin-left: 10%;
+                }
+            }
+            @media screen and (min-width:750px){
+                .inputbox{
+                    position: fixed;
+                    bottom:2px;
+                    margin-left: 20%;
+                }
+            }
+
+            @media screen and (max-width:325px){
+                #sendButton{
+                    float:left;
+                    margin-top:50px;
+                }
+                #textareaSty{
+                    width:100px;
+                }
+            }
+            @media screen and (max-width:432px) and (min-width:325px){
+                #sendButton{
+                    float:left;
+                    margin-top:50px;
+                }
+                #textareaSty{
+                    width:200px;
+                }
+            }
+            @media screen and (max-width:924px) and (min-width:432px){
+                #sendButton{
+                    float:left;
+                    margin-top:50px;
+                }
+                #textareaSty{
+                    width:300px;
+                }
+            }
+            @media screen and (min-width:924px){
+                #sendButton{
+                    float:left;
+                    margin-top:50px;
+                }
+                #textareaSty{
+                    width:650px;
+                }
+            }
