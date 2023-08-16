@@ -1,5 +1,0 @@
-EdgeGPT
-FastAPI
-aiohtpp
-uvicorn
-python-multipart
