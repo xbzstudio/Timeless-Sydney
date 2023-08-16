@@ -22,7 +22,7 @@ Geph迷雾通下载：[https://f001.backblazeb2.com/file/geph4-dl/geph-releases/
 下载本项目，将其解压。  
 下载[Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm)浏览器插件。
 转到[New Bing官方网站](https://bing.com/chat)，打开插件，点击Export -> Export-Json，将cookie信息复制到自己的剪贴板，然后打开`config`文件夹中的`cookie.json`，将信息粘贴至文件内。  
-打开终端，输入如下代码：
+打开终端，输入如下代码（将yourFilePath替换为你下载的文件夹的绝对路径） ：
 ```cmd
 cd /d yourFilePath
 pip install -r requirements.txt
