@@ -86,16 +86,15 @@ async def wsStream(ws: WebSocket):
                         response['error'] = '已到达一天的最大聊天次数，无法继续聊天'
                         await ws.send_text(json.dumps(response))
                     if ans.get('item').get('result').get('value') == 'Success':
-                        response['answer'] = [ans.get('item').get('messages')[1].get('adaptiveCards')[0].get('body')[i].get('text') for i in range(len(ans.get('item').get('messages')[1].get('adaptiveCards')[0].get('body')))][0] if [ans.get('item').get('messages')[1].get('adaptiveCards')[0].get('body')[i].get('text') for i in range(len(ans.get('item').get('messages')[1].get('adaptiveCards')[0].get('body')))]!=None else None
-                        response['suggested'] = [i.get('text') for i in ans.get('item').get('messages')[1].get('suggestedResponses')]
-                        if len(ans.get('item').get('messages')[1].get('sourceAttributions')) != 0:
-                            response['urls'] = [{'name' : i.get('providerDisplayName'), 'url' : i.get('seeMoreUrl')} for i in ans.get('item').get('messages')[1].get('sourceAttributions')]
+                        response['answer'] = ans['item']['messages'][-1]['adaptiveCards'][0]['body'][0]['text']
+                        response['suggested'] = [i['text'] for i in ans['item']['messages'][-1]['suggestedResponses']]            
+                        response['urls'] = [{'name' : i['providerDisplayName'], 'url' : i['seeMoreUrl']} for i in ans['item']['messages'][-1]['sourceAttributions']]
                         await ws.send_text(json.dumps(response))
                     else:
                         response['error'] = '未知错误，value：' + str(ans.get('item').get('result').get('value'))
                         await ws.send_text(json.dumps(response))
         except Exception as e:
-            if e.args[0] == "adaptiveCards" or e.args[0] == "'NoneType' object is not subscriptable":
+            if e.args[0] == "adaptiveCards":
                 response['answer'] = imageInfo
                 response['done'] = True
                 await ws.send_text(json.dumps(response))
