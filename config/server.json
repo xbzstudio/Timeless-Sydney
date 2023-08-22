@@ -1,5 +1,5 @@
 {
-    "port" : 20808,
+    "port" : 80,
     "host" : "0.0.0.0",
     "useUserCookie" : false,
     "tips" : {

@@ -2,7 +2,7 @@
 var settings = {
     "backgroundUrl" : "./static/Background.jpg",
     "connectTo" : 'http://127.0.0.1',
-    "port" : 20808,
+    "port" : 80,
     "tipName" : 'Sydney',
     'style' : 'creative',
     'cookie' : '',
