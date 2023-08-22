@@ -109,6 +109,10 @@ var settings = {
 
 最简单的方法是先把Python卸载了，然后用安装包重新安装。在安装的过程中，注意要勾选“Add Python 3.xx to path”的选项，否则重装了之后还是没法使用pip。
 
+### Exception: Authentication failed
+
+尝试更换VPN节点，或者更换VPN。建议使用我推荐的Geph迷雾通。
+
 # 结尾
 
 ## 本项目的共同建设者：
