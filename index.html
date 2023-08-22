@@ -12,7 +12,7 @@
     <script src="./static/highlight.min.js"></script>
     <script src="./static/marked.min.js"></script>
     <link rel="stylesheet" href="./static/mdui.min.css">
-    <link rel="icon" href="./static/dist/media/img/favicon.png" type="image/png"> 
+    <link rel="icon" href="./static/dist/media/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./static/vendor/bundle.css">
     <link rel="stylesheet" href="./static/vendor/enjoyhint/enjoyhint.css">
     <link rel="stylesheet" href="./static/dist/css/app.min.css">
@@ -39,7 +39,8 @@
                                 <option value="creative">creative</option>
                                 <option value="balanced">balanced</option>
                                 <option value="precise">precise</option>
-                            </select> </div>
+                            </select>
+                        </div>
                         <div class="form-group"> <label for="fullname" class="col-form-label">咒语:</label> <input
                                 type="text" class="form-control" id="Tip" ng-model="tipName"> </div>
                         <p style="margin:0px;">Timeless Sydney提供了内置的咒语模板,仅需要在输入框中输入模板的名称,就可以使用该模板,而不需要手动黏贴咒语.</p>
@@ -49,13 +50,14 @@
                         <div style="clear: both;"></div>
                         <div class="form-group"> <label for="fullname" class="col-form-label">使用wss协议:</label> <br />
                             <label class="mdui-checkbox"> <input type="checkbox" / ng-model="wss"> <i
-                                    class="mdui-checkbox-icon"></i> {{wss}} </label> </div>
+                                    class="mdui-checkbox-icon"></i> {{wss}} </label>
+                        </div>
                     </div>
                     <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal"
                             aria-label="Close"> 关闭 </button> </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <div class="layout">
             <div class="content">
                 <div class="chat">
@@ -100,8 +102,8 @@
                                 </div>
                                 <p class="message-content" style="word-break:break-all; " ng-bind-html="msg.content">
                                     未知消息 </p>
-                                <div ng-repeat="url in msg.urls"> <a href="{{url.url}}"
-                                        style="float:left;margin-left:3%;font-size: 17;">{{url.name}}</a> </div>
+                                <div ng-repeat="url in msg.urls"> <a href="{{url.url}}" class="btn btn-primary"
+                                        style="float:left;margin-left:1%;">{{url.name}}</a> </div>
                             </div>
                         </div>
                     </div>
