@@ -35,12 +35,12 @@
                 backdrop-filter: blur(15px);
             }
 
-            a{
+            /*a{
                 background-image:-webkit-linear-gradient(right, #039ac8,#10c74d);
                 -webkit-background-clip:text;
                 -webkit-text-fill-color:transparent;
                 text-decoration:none;
-            }
+            }*/
 
             code{
                 text-align: left;
@@ -105,34 +105,26 @@
                     float:left;
                     margin-top:50px;
                 }
-                #textareaSty{
-                    width:100px;
-                }
+                
             }
             @media screen and (max-width:432px) and (min-width:325px){
                 #sendButton{
                     float:left;
                     margin-top:50px;
                 }
-                #textareaSty{
-                    width:200px;
-                }
+              
             }
             @media screen and (max-width:924px) and (min-width:432px){
                 #sendButton{
                     float:left;
                     margin-top:50px;
                 }
-                #textareaSty{
-                    width:300px;
-                }
+               
             }
             @media screen and (min-width:924px){
                 #sendButton{
                     float:left;
                     margin-top:50px;
                 }
-                #textareaSty{
-                    width:650px;
-                }
+                
             }
