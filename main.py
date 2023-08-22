@@ -7,6 +7,7 @@ from EdgeGPT.ImageGen import ImageGenAsync
 import uvicorn
 import json, asyncio
 from pydantic import BaseModel
+from fastapi.staticfiles import StaticFiles
 
 with open('./config/server.json', 'r', encoding="utf-8") as f: #获取服务端配置
     config = json.loads(f.read())
@@ -27,6 +28,7 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class DrawTip(BaseModel):
     tip : str = "a cat"
@@ -35,13 +37,6 @@ class DrawTip(BaseModel):
 @app.get('/') #返回web客户端
 async def Index() -> Response:
     return Response(open(f'./index.html', 'r', encoding="utf-8").read())
-
-@app.get('/static/{filepath}') #返回静态文件
-async def getFile(filepath : str) -> Response:
-    if filepath[-4::] == '.jpg' or filepath[-4::] == '.png':
-        return Response(open(f'./static/{filepath}', 'rb').read())
-    else:
-        return Response(open(f'./static/{filepath}', 'r', encoding="utf-8").read())
 
 
 @app.websocket('/chat/ws') #返回bing的回答

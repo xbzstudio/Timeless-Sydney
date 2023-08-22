@@ -82,7 +82,7 @@ var settings = {
 
 ### 头像更改
 
-进入./static文件夹，里面有两张图片，一个是`User.png`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"User.png"或"Bing.png"。
+进入./static文件夹，里面有两张图片，一个是`user.svg`，一个是`Bing.png`，如果你想要更换你自己或New Bing的头像的话，就在这个文件夹中加入你想要更换的图片，并把它重命名为"user.svg"或"Bing.png"。
 
 ## 一些疑难解答：
 
