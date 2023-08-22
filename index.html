@@ -58,6 +58,7 @@
                 </div>
             </div>
         </div>
+        <style>.chat-body{overflow: auto!important}</style>
         <div class="layout">
             <div class="content">
                 <div class="chat">
@@ -89,7 +90,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="chat-body">
+                    <div class="chat-body" style="overflow: auto!important">
                         <div class="messages">
                             <div class="{{msg.class}}" ng-repeat="msg in chatHistory">
                                 <div class="message-avatar">
