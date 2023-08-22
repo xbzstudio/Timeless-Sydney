@@ -100,10 +100,16 @@
                                         <div class="time">消息</div>
                                     </div>
                                 </div>
-                                <p class="message-content" style="word-break:break-all; " ng-bind-html="msg.content">
-                                    未知消息 </p>
-                                <div ng-repeat="url in msg.urls"> <a href="{{url.url}}" class="btn btn-primary"
-                                        style="float:left;margin-left:1%;">{{url.name}}</a> </div>
+                                <div><p class="message-content" style="word-break:break-all; " ng-bind-html="msg.content">
+                                    未知消息 </p>  <div ng-repeat="url in msg.urls"> <a href="{{url.url}}" class="btn btn-primary "
+                                        style="float:left;margin-right:1%;">{{url.name}}</a> </div></div>
+                                    
+                              
+                                  
+                                            <div ng-repeat="sug in msg.suggested">
+                                                <button class="btn " style="float:left;margin-right:1%;" ng-click="useSug(sug)">{{sug}}</button>
+                                            </div>
+                                    
                             </div>
                         </div>
                     </div>
